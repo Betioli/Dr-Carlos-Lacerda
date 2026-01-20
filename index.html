@@ -481,7 +481,7 @@
             top: 50%;
             transform: translateY(-50%);
             font-size: 28px;
-            color: var(--cor-dourado);
+            color: var(--cor-primaria);
             font-weight: 300;
             transition: transform 0.3s ease;
         }
@@ -625,8 +625,9 @@
 
             .hero {
                 min-height: auto;
-                padding: 100px 0 80px 0;
+                padding: 100px 0 auto 0;
             }
+            
 
             .hero-text h1 {
                 font-size: 32px;
@@ -699,7 +700,14 @@
                     <a href="https://api.whatsapp.com/send/?phone=5516982057151&text=Ol%C3%A1%20Dr%20Carlos%20tudo%20j%C3%B3ia%20?%20Vim%20pelo%20site%20e%20preciso%20de%20sua%20ajuda.&type=phone_number&app_absent=0" class="btn-whatsapp" target="_blank">Falar com o Dr Carlos agora</a>
                 </div>
                 <div class="hero-image fade-in">
-                    <img src="image/imagem-hero2.jpg" alt="Dr. Carlos Lacerda - Advogado Especialista em Inventário">
+                    <picture>
+                        <!-- Imagem para mobile -->
+                        <source media="(max-width: 768px)" srcset="image/imagem-hero-mobile.jpg">
+
+                        <!-- Imagem padrão (desktop) -->
+                        <img src="image/imagem-hero2.jpg" alt="Dr Carlos Lacerda - Advogado especialista em inventário">
+                    </picture>
+                    <!--img src="image/imagem-hero2.jpg" alt="Dr. Carlos Lacerda - Advogado Especialista em Inventário"-->
                 </div>
             </div>
         </div>
