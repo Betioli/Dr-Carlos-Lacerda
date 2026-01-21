@@ -65,17 +65,17 @@
         }
 
         /* ===================================
-           HERO SECTION
+           HERO SECTION - AJUSTES MOBILE
         =================================== */
         .hero {
             height: 100vh;
-            min-height: 100vh;
+            min-height: 90vh;
             background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding: 80px 0;
+            padding: 60px 0;
         }
 
         .hero::before {
@@ -121,6 +121,9 @@
 
         .hero-image {
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .hero-image img {
@@ -129,10 +132,12 @@
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
             border: 3px solid var(--cor-dourado);
+            object-fit: cover;
         }
 
         /* ===================================
            SEÇÃO - IDENTIFICAÇÃO DA DOR
+           TÍTULOS MENORES PARA MOBILE
         =================================== */
         .secao-dor {
             padding: var(--espacamento-secao) 0;
@@ -197,6 +202,7 @@
 
         /* ===================================
            SEÇÃO - O QUE ACONTECE SE NÃO RESOLVER
+           TÍTULOS MENORES PARA MOBILE
         =================================== */
         
         .secao-consequencias {
@@ -205,8 +211,8 @@
         }
         .container-consequencias {
             max-width: 2000px;
-            margin-left: 50px;
-            margin-right: 50px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         .consequencias-grid {
@@ -254,13 +260,13 @@
 
         /* ===================================
            SEÇÃO - COMO RESOLVE (COM BANNER)
+           TÍTULOS MENORES PARA MOBILE
         =================================== */
         .secao-resolve {
             padding: var(--espacamento-secao) 0;
             background-image: url('banner.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             position: relative;
         }
 
@@ -329,6 +335,7 @@
 
         /* ===================================
            SEÇÃO - DIFERENCIAIS
+           TÍTULOS MENORES PARA MOBILE
         =================================== */
         .secao-diferenciais {
             padding: var(--espacamento-secao) 0;
@@ -385,6 +392,7 @@
 
         /* ===================================
            SEÇÃO - SOBRE O ADVOGADO
+           AJUSTES IMAGEM PARA MOBILE
         =================================== */
         .secao-sobre {
             padding: var(--espacamento-secao) 0;
@@ -402,14 +410,19 @@
 
         .sobre-image {
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .sobre-image img {
             width: 50%;
-            height: 80%;
+            max-width: 400px;
+            height: auto;
             border-radius: 5px;
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
             border: 2px solid var(--cor-dourado);
+            object-fit: cover;
         }
 
         .sobre-text h3 {
@@ -453,7 +466,7 @@
         }
 
         .faq-item {
-            background: grey;
+            background: var(--cor-cinza-escuro);
             margin-bottom: 20px;
             border-radius: 12px;
             overflow: hidden;
@@ -464,7 +477,7 @@
             padding: 25px 30px;
             font-size: 20px;
             font-weight: 600;
-            color: var(--cor-primaria);
+            color: var(--cor-secundaria);
             cursor: pointer;
             position: relative;
             transition: all 0.3s ease;
@@ -478,10 +491,10 @@
             content: '+';
             position: absolute;
             right: 30px;
-            top: 50%;
+            top: 60%;
             transform: translateY(-50%);
             font-size: 28px;
-            color: var(--cor-primaria);
+            color: var(--cor-dourado-escuro);
             font-weight: 300;
             transition: transform 0.3s ease;
         }
@@ -587,74 +600,199 @@
         }
 
         /* ===================================
-           RESPONSIVIDADE
+           RESPONSIVIDADE COMPLETA
         =================================== */
-        @media (max-width: 968px) {
+        @media (max-width: 1200px) {
+            .container-consequencias {
+                margin: 0 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            /* Ajustes para tablets grandes */
             .hero-content {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 50px;
             }
 
             .hero-text h1 {
-                font-size: 36px;
+                font-size: 40px;
+                text-align: center;
             }
 
             .hero-text p {
                 font-size: 18px;
+                text-align: center;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .hero-image img {
+                max-width: 400px;
             }
 
             .sobre-content {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 50px;
             }
 
             .sobre-image {
-                max-width: 400px;
-                margin: 0 auto;
+                order: -1;
             }
 
-            .diferenciais-grid {
-                grid-template-columns: 1fr;
+            .sobre-image img {
+                max-width: 400px;
+            }
+
+            .sobre-text {
+                text-align: center;
+            }
+
+            .secao-titulo {
+                font-size: 34px;
             }
         }
 
         @media (max-width: 768px) {
+            /* Ajustes para tablets e celulares grandes */
             :root {
                 --espacamento-secao: 60px;
             }
 
             .hero {
+                padding: 80px 0 60px;
                 min-height: auto;
-                padding: 100px 0 auto 0;
             }
-            
 
             .hero-text h1 {
                 font-size: 32px;
+                line-height: 1.3;
+            }
+
+            .hero-text p {
+                font-size: 17px;
+            }
+
+            .hero-image img {
+                max-width: 350px;
             }
 
             .secao-titulo {
                 font-size: 28px;
+                margin-bottom: 40px;
             }
 
-            .btn-whatsapp {
-                width: 100%;
-                padding: 16px 30px;
-                font-size: 15px;
+            .lista-dor h3 {
+                font-size: 20px;
+            }
+
+            .lista-dor li {
+                font-size: 16px;
+                padding: 12px 0 12px 35px;
+            }
+
+            .destaque-alerta {
+                font-size: 18px;
+                padding: 25px;
             }
 
             .consequencias-grid {
                 grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .consequencia-card {
+                padding: 25px;
+            }
+
+            .consequencia-card p {
+                font-size: 16px;
+            }
+
+            .alerta-final {
+                font-size: 20px;
+                padding: 30px;
+                margin-top: 40px;
             }
 
             .resolve-item {
-                padding-left: 70px;
+                padding: 25px 30px 25px 70px;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            .resolve-item::before {
+                left: 20px;
+                font-size: 28px;
+            }
+
+            .resolve-destaque {
+                font-size: 18px;
+                padding: 25px;
+                margin-top: 40px;
+            }
+
+            .diferenciais-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .diferencial-card {
+                padding: 30px 25px;
+            }
+
+            .diferencial-card h3 {
+                font-size: 18px;
+            }
+
+            .diferencial-card p {
+                font-size: 15px;
+            }
+
+            .sobre-text h3 {
+                font-size: 28px;
+            }
+
+            .sobre-text h4 {
+                font-size: 16px;
+            }
+
+            .sobre-text p {
                 font-size: 16px;
             }
 
             .faq-pergunta {
                 font-size: 18px;
-                padding-right: 50px;
+                padding: 20px 25px 20px 25px;
+            }
+
+            .faq-pergunta::after {
+                right: 25px;
+                font-size: 24px;
+            }
+
+            .faq-resposta-inner {
+                padding: 0 25px 20px 25px;
+                font-size: 16px;
+            }
+
+            .cta-intermediario h3 {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+
+            .secao-cta p {
+                font-size: 18px;
+            }
+
+            .btn-whatsapp {
+                padding: 16px 35px;
+                font-size: 15px;
+                display: block;
+                width: fit-content;
+                margin: 0 auto;
             }
 
             .whatsapp-float {
@@ -663,8 +801,148 @@
                 width: 60px;
                 height: 60px;
             }
+        }
+
+        @media (max-width: 576px) {
+            /* Ajustes para celulares */
+            .hero {
+                padding: 60px 0 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 26px;
+                margin-bottom: 20px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+
+            .hero-image img {
+                max-width: 300px;
+            }
+
+            .secao-titulo {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+
+            .lista-dor li {
+                font-size: 15px;
+                padding: 10px 0 10px 30px;
+            }
+
+            .lista-dor li:before {
+                font-size: 20px;
+                top: 10px;
+            }
+
+            .destaque-alerta {
+                font-size: 16px;
+                padding: 20px;
+                margin-top: 30px;
+            }
+
+            .consequencia-card {
+                padding: 20px;
+            }
+
+            .alerta-final {
+                font-size: 18px;
+                padding: 25px;
+                margin-top: 30px;
+            }
+
+            .resolve-item {
+                padding: 20px 25px 20px 65px;
+                font-size: 15px;
+            }
+
+            .resolve-destaque {
+                font-size: 16px;
+                padding: 20px;
+                margin-top: 30px;
+            }
+
+            .diferencial-card {
+                padding: 25px 20px;
+            }
+
+            .sobre-image img {
+                max-width: 280px;
+            }
+
+            .sobre-text h3 {
+                font-size: 24px;
+            }
+
+            .faq-pergunta {
+                font-size: 16px;
+                padding: 18px 20px 18px 20px;
+            }
+
+            .faq-resposta-inner {
+                font-size: 15px;
+            }
 
             .cta-intermediario h3 {
+                font-size: 22px;
+            }
+
+            .secao-cta p {
+                font-size: 16px;
+            }
+
+            .btn-whatsapp {
+                padding: 14px 30px;
+                font-size: 14px;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .whatsapp-float svg {
+                width: 30px;
+                height: 30px;
+            }
+
+            footer {
+                padding: 20px 0;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            /* Ajustes para celulares muito pequenos */
+            .hero-text h1 {
+                font-size: 22px;
+            }
+
+            .hero-image img {
+                max-width: 250px;
+            }
+
+            .secao-titulo {
+                font-size: 22px;
+            }
+
+            .sobre-image img {
+                max-width: 250px;
+            }
+
+            .resolve-item {
+                padding-left: 55px;
+            }
+
+            .resolve-item::before {
+                left: 15px;
                 font-size: 24px;
             }
         }
@@ -700,14 +978,7 @@
                     <a href="https://api.whatsapp.com/send/?phone=5516982057151&text=Ol%C3%A1%20Dr%20Carlos%20tudo%20j%C3%B3ia%20?%20Vim%20pelo%20site%20e%20preciso%20de%20sua%20ajuda.&type=phone_number&app_absent=0" class="btn-whatsapp" target="_blank">Falar com o Dr Carlos agora</a>
                 </div>
                 <div class="hero-image fade-in">
-                    <picture>
-                        <!-- Imagem para mobile -->
-                        <source media="(max-width: 768px)" srcset="image/imagem-hero-mobile.jpg">
-
-                        <!-- Imagem padrão (desktop) -->
-                        <img src="image/imagem-hero2.jpg" alt="Dr Carlos Lacerda - Advogado especialista em inventário">
-                    </picture>
-                    <!--img src="image/imagem-hero2.jpg" alt="Dr. Carlos Lacerda - Advogado Especialista em Inventário"-->
+                    <img src="image/imagem-hero2.jpg" alt="Dr Carlos Lacerda - Advogado especialista em inventário">
                 </div>
             </div>
         </div>
@@ -786,7 +1057,7 @@
 
     <!-- SEÇÃO - DIFERENCIAIS -->
     <section class="secao-diferenciais">
-        <div class="container-diferenciais">
+        <div class="container">
             <h2 class="secao-titulo">Por que escolher o Dr. Carlos Lacerda</h2>
             <div class="diferenciais-grid">
                 <div class="diferencial-card">
@@ -904,7 +1175,7 @@
     <!-- BOTÃO FLUTUANTE WHATSAPP -->
     <a href="https://api.whatsapp.com/send/?phone=5516982057151&text=Ol%C3%A1%20Dr%20Carlos%20tudo%20j%C3%B3ia%20?%20Vim%20pelo%20site%20e%20preciso%20de%20sua%20ajuda.&type=phone_number&app_absent=0" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
         <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.247 1.409 1.417-5.267-0.319-0.524c-1.342-2.201-2.054-4.738-2.054-7.323 0-7.51 6.11-13.62 13.62-13.62s13.62 6.11 13.62 13.62c0 7.51-6.11 13.62-13.62 13.62zM21.305 19.26c-0.346-0.174-2.049-1.007-2.366-1.123-0.317-0.116-0.547-0.174-0.776 0.174s-0.892 1.123-1.094 1.347c-0.201 0.224-0.402 0.251-0.748 0.076-0.346-0.174-1.461-0.537-2.785-1.711-1.030-0.914-1.725-2.044-1.927-2.39-0.201-0.346-0.022-0.533 0.152-0.707 0.156-0.155 0.346-0.402 0.518-0.603 0.174-0.201 0.231-0.346 0.346-0.571 0.116-0.224 0.058-0.427-0.028-0.603s-0.776-1.87-1.063-2.565c-0.28-0.672-0.56-0.58-0.776-0.591-0.201-0.010-0.428-0.012-0.656-0.012s-0.603 0.086-0.92 0.427c-0.317 0.346-1.206 1.179-1.206 2.873s1.235 3.333 1.406 3.561c0.174 0.224 2.425 3.732 5.872 5.234 0.821 0.354 1.462 0.566 1.962 0.724 0.825 0.262 1.577 0.225 2.168 0.137 0.662-0.099 2.045-0.835 2.332-1.642 0.288-0.807 0.288-1.501 0.201-1.642-0.086-0.14-0.317-0.224-0.663-0.398z"/>
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.247 1.409 1.417-5.267-0.319-0.524c-1.342-2.201-2.054-4.738-2.054-7.323 0-7.51 6.11-13.62 13.62-13.62s13.62 6.11 13.62 13.62c0 7.51-6.11 13.62-13.62 13.62zM21.305 19.26c-0.346-0.174-2.049-1.007-2.366-1.123-0.317-0.116-0.547-0.174-0.776 0.174s-0.892 1.123-1.094 1.347c-0.201 0.224-0.402 0.251-0.748 0.076-0.346-0.174-1.461-0.537-2.785-1.711-1.03-0.914-1.725-2.044-1.927-2.39-0.201-0.346-0.022-0.533 0.152-0.707 0.156-0.155 0.346-0.402 0.518-0.603 0.174-0.201 0.231-0.346 0.346-0.571 0.116-0.224 0.058-0.427-0.028-0.603s-0.776-1.87-1.063-2.565c-0.28-0.672-0.56-0.58-0.776-0.591-0.201-0.010-0.428-0.012-0.656-0.012s-0.603 0.086-0.92 0.427c-0.317 0.346-1.206 1.179-1.206 2.873s1.235 3.333 1.406 3.561c0.174 0.224 2.425 3.732 5.872 5.234 0.821 0.354 1.462 0.566 1.962 0.724 0.825 0.262 1.577 0.225 2.168 0.137 0.662-0.099 2.045-0.835 2.332-1.642 0.288-0.807 0.288-1.501 0.201-1.642-0.086-0.14-0.317-0.224-0.663-0.398z"/>
         </svg>
     </a>
 
