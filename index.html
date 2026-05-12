@@ -68,6 +68,65 @@
         }
 
         /* ===================================
+           NAVBAR
+        =================================== */
+        .navbar {
+            background: var(--cor-primaria);
+            color: var(--cor-secundaria);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--cor-dourado);
+            margin: 0;
+        }
+
+        .navbar-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-menu a {
+            color: var(--cor-secundaria);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-menu a:hover {
+            color: var(--cor-dourado);
+        }
+
+        .navbar-menu .navbar-cta {
+            background: var(--cor-dourado);
+            color: var(--cor-primaria);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        .navbar-menu .navbar-cta:hover {
+            background: var(--cor-dourado-escuro);
+            color: var(--cor-primaria);
+        }
+
+        /* ===================================
            HERO SECTION - AJUSTES MOBILE
         =================================== */
         .hero {
@@ -142,7 +201,7 @@
            SEÇÃO - IDENTIFICAÇÃO DA DOR
            TÍTULOS MENORES PARA MOBILE
         =================================== */
-        .secao-dor {
+        .secao-areas {
             padding: var(--espacamento-secao) 0;
             background: var(--cor-secundaria);
         }
@@ -667,6 +726,20 @@
                 --espacamento-secao: 60px;
             }
 
+            .navbar-menu {
+                flex-direction: column;
+                gap: 15px;
+                display: none;
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .navbar-brand h2 {
+                font-size: 18px;
+            }
+
             .hero {
                 padding: 80px 0 60px;
                 min-height: auto;
@@ -974,8 +1047,25 @@
 </head>
 <body>
 
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h2>Dr. Carlos Lacerda</h2>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#areas">Áreas de Atuação</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#diferenciais">Por Que Nos Escolher</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contato" class="navbar-cta">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- HERO SECTION -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text fade-in">
@@ -991,11 +1081,11 @@
     </section>
 
     <!-- SEÇÃO - IDENTIFICAÇÃO DA DOR -->
-    <section class="secao-dor">
+    <section class="secao-areas" id="areas">
         <div class="container">
-            <h2 class="secao-titulo">Reconheça se você está em alguma dessas situações e considere buscar orientação</h2>
+            <h2 class="secao-titulo">Áreas de Atuação</h2>
             <div class="lista-dor">
-                <h3>Um familiar faleceu e deixou:</h3>
+                <h3>Especialidades e Atuações</h3>
                 <ul>
                     <li><strong>Casa - Terreno - Apartamento</strong></li>
 
@@ -1044,9 +1134,9 @@
     </section>
 
     <!-- SEÇÃO - COMO RESOLVE (COM BANNER DE FUNDO) -->
-    <section class="secao-resolve">
+    <section class="secao-resolve" id="como-funciona">
         <div class="container">
-            <h2 class="secao-titulo">Como conduzimos todo o processo</h2>
+            <h2 class="secao-titulo">Como Funciona o Processo</h2>
             <div class="resolve-lista">
                 <div class="resolve-item">Analisamos e explicamos exatamente o que deve-se fazer</div>
                 <div class="resolve-item">Orientamos sobre todos os documentos necessários</div>
@@ -1062,9 +1152,9 @@
     </section>
 
     <!-- SEÇÃO - DIFERENCIAIS -->
-    <section class="secao-diferenciais">
+    <section class="secao-diferenciais" id="diferenciais">
         <div class="container">
-            <h2 class="secao-titulo">Por que escolher o Dr. Carlos Lacerda</h2>
+            <h2 class="secao-titulo">Por Que Nos Escolher</h2>
             <div class="diferenciais-grid">
                 <div class="diferencial-card">
                     <h3>Linguagem Clara</h3>
@@ -1095,9 +1185,9 @@
     </section>
 
     <!-- SEÇÃO - SOBRE O ADVOGADO -->
-    <section class="secao-sobre">
+    <section class="secao-sobre" id="sobre">
         <div class="container">
-            <h2 class="secao-titulo">Quem vai cuidar do seu caso</h2>
+            <h2 class="secao-titulo">Sobre Nós</h2>
             <div class="sobre-content">
                 <div class="sobre-image">
                     <img src="image/imagem-sobre-mim.png" alt="Dr. Carlos Augusto Dias Lacerda">
@@ -1114,7 +1204,7 @@
     </section>
 
     <!-- SEÇÃO - FAQ -->
-    <section class="secao-faq">
+    <section class="secao-faq" id="faq">
         <div class="container">
             <h2 class="secao-titulo">Dúvidas comuns de quem precisa fazer inventário</h2>
             <div class="faq-container">
@@ -1170,8 +1260,8 @@
         </div>
     </section>
 
-    <!-- CTA FINAL -->
-    <section class="secao-cta">
+    <!-- SEÇÃO - CONTATO -->
+    <section class="secao-cta" id="contato">
         <div class="container">
             <h2 class="secao-titulo">Solicite orientação jurídica sobre seu inventário</h2>
             <p>Entre em contato conosco para esclarecer suas dúvidas.</p>
