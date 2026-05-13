@@ -1,0 +1,282 @@
+/* ===================================
+   PÁGINAS DE ÁREAS - ESTILOS ESPECÍFICOS
+=================================== */
+
+.pagina-area {
+    background: var(--cor-secundaria);
+}
+
+.pagina-area .navbar {
+    background: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: none;
+}
+
+.pagina-area .navbar-brand {
+    text-decoration: none;
+}
+
+.pagina-area .navbar-brand h2 {
+    color: var(--cor-primaria);
+}
+
+.pagina-area .navbar-menu {
+    align-items: center;
+}
+
+.pagina-area .navbar-menu a {
+    color: var(--cor-cinza-escuro);
+}
+
+.pagina-area .navbar-menu a:hover,
+.pagina-area .navbar-menu a.active {
+    color: var(--cor-dourado);
+}
+
+.pagina-area .navbar-menu .navbar-cta {
+    color: var(--cor-primaria);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    font-size: 14px;
+    color: var(--cor-cinza-escuro);
+    margin-bottom: 30px;
+    padding: 20px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.breadcrumb a {
+    color: var(--cor-dourado);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Página Container */
+.area-page-container {
+    background: var(--cor-secundaria);
+    padding: 60px 0;
+    min-height: 100vh;
+}
+
+.area-page-header {
+    margin-bottom: 50px;
+}
+
+.area-page-header h1 {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.area-page-header p {
+    max-width: 860px;
+    font-size: 18px;
+    color: var(--cor-cinza-escuro);
+    line-height: 1.8;
+}
+
+/* Serviços Grid */
+.servicos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin: 50px auto;
+    max-width: 900px;
+}
+
+.servicos-coluna {
+    background: var(--cor-cinza);
+    border-radius: 18px;
+    padding: 36px 34px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.servicos-coluna h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: 25px;
+}
+
+.servicos-coluna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.servicos-coluna li {
+    font-size: 18px;
+    color: var(--cor-cinza-escuro);
+    padding: 12px 0;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.8;
+}
+
+.servicos-coluna li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--cor-dourado);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Carrossel de Artigos */
+.conteudo-relacionado {
+    margin-top: 70px;
+}
+
+.conteudo-relacionado .secao-titulo {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.carrossel-container {
+    position: relative;
+    margin: 50px 0;
+}
+
+.carrossel-wrapper {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    scrollbar-width: none;
+}
+
+.carrossel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.card-artigo {
+    flex: 0 0 280px;
+    background: var(--cor-cinza);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card-artigo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15);
+}
+
+.card-artigo-image {
+    width: 100%;
+    height: 180px;
+    background: var(--cor-cinza-escuro);
+    object-fit: cover;
+    display: block;
+}
+
+.card-artigo-content {
+    padding: 20px;
+}
+
+.card-artigo-categoria {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cor-dourado);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card-artigo-titulo {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.card-artigo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--cor-dourado);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: gap 0.3s ease;
+}
+
+.card-artigo-link:hover {
+    gap: 12px;
+}
+
+.card-artigo-link::after {
+    content: '→';
+}
+
+/* Setas Carrossel */
+.seta-carrossel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--cor-dourado);
+    color: var(--cor-primaria);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.seta-carrossel:hover {
+    background: var(--cor-dourado-escuro);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.seta-carrossel:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.seta-prev {
+    left: -30px;
+}
+
+.seta-next {
+    right: -30px;
+}
+
+/* CTA Final */
+.cta-area-final {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+}
+
+.cta-area-final p {
+    max-width: 760px;
+    margin: 20px auto 30px;
+    font-size: 18px;
+    color: var(--cor-cinza-escuro);
+    line-height: 1.8;
+}
+
+.cta-area-final .btn-whatsapp {
+    background: var(--cor-dourado);
+    color: var(--cor-primaria);
+}
