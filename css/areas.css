@@ -3,12 +3,12 @@
 =================================== */
 
 .pagina-area {
-    background: var(--cor-secundaria);
+    background: var(--cor-secundaria-branco);
 }
 
 .pagina-area .navbar {
-    background: var(--cor-secundaria);
-    color: var(--cor-primaria);
+    background: var(--cor-primaria-preto);
+    color: var(--cor-secundaria-branco);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     box-shadow: none;
 }
@@ -18,7 +18,7 @@
 }
 
 .pagina-area .navbar-brand h2 {
-    color: var(--cor-primaria);
+    color: var(--cor-primaria-preto);
 }
 
 .pagina-area .navbar-menu {
@@ -26,7 +26,7 @@
 }
 
 .pagina-area .navbar-menu a {
-    color: var(--cor-cinza-escuro);
+    color: var(--cor-secundaria-branco);
 }
 
 .pagina-area .navbar-menu a:hover,
@@ -35,7 +35,7 @@
 }
 
 .pagina-area .navbar-menu .navbar-cta {
-    color: var(--cor-primaria);
+    color: var(--cor-primaria-preto);
 }
 
 /* Breadcrumb */
@@ -62,8 +62,8 @@
 
 /* Página Container */
 .area-page-container {
-    background: var(--cor-secundaria);
-    padding: 60px 0;
+    background: var(--cor-secundaria-branco);
+    padding: 0px 0;
     min-height: 100vh;
 }
 
@@ -72,16 +72,16 @@
 }
 
 .area-page-header h1 {
-    font-size: 38px;
-    font-weight: 700;
-    color: var(--cor-primaria);
+    font-size: 35px;
+    font-weight: 500;
+    color: var(--cor-primaria-preto);
     margin-bottom: 24px;
     line-height: 1.2;
 }
 
 .area-page-header p {
     max-width: 860px;
-    font-size: 18px;
+    font-size: 15px;
     color: var(--cor-cinza-escuro);
     line-height: 1.8;
 }
@@ -92,7 +92,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     margin: 50px auto;
-    max-width: 900px;
+    max-width: 1000px;
 }
 
 .servicos-coluna {
@@ -102,10 +102,19 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
+.secao-titulofs {
+            font-size: 20px;
+            font-weight: 500;
+            text-align: left;
+            margin-bottom: 10px;
+            color: var(--cor-primaria-preto);
+            line-height: 1.1;
+        
+}
 .servicos-coluna h3 {
     font-size: 22px;
-    font-weight: 700;
-    color: var(--cor-primaria);
+    font-weight: 500;
+    color: var(--cor-primaria-preto);
     margin-bottom: 25px;
 }
 
@@ -115,7 +124,7 @@
 }
 
 .servicos-coluna li {
-    font-size: 18px;
+    font-size: 15px;
     color: var(--cor-cinza-escuro);
     padding: 12px 0;
     padding-left: 25px;
@@ -134,12 +143,16 @@
 
 /* Carrossel de Artigos */
 .conteudo-relacionado {
-    margin-top: 70px;
-}
-
-.conteudo-relacionado .secao-titulo {
-    text-align: left;
+    margin-top: 270px;
     margin-bottom: 30px;
+}
+.secao-titulo-atuacao h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--cor-primaria-preto);
+    margin-bottom: 20px;
+    line-height: 1.1;
+    text-align: left;
 }
 
 .carrossel-container {
@@ -198,7 +211,7 @@
 .card-artigo-titulo {
     font-size: 16px;
     font-weight: 600;
-    color: var(--cor-primaria);
+    color: var(--cor-primaria-preto);
     margin-bottom: 12px;
     line-height: 1.4;
 }
@@ -228,7 +241,7 @@
     top: 50%;
     transform: translateY(-50%);
     background: var(--cor-dourado);
-    color: var(--cor-primaria);
+    color: var(--cor-primaria-preto);
     border: none;
     width: 50px;
     height: 50px;
@@ -266,17 +279,25 @@
     text-align: center;
     margin-top: 60px;
     padding: 40px;
+        background: rgb(32, 30, 30);;
+}
+
+.secao-titulo-cta-atuacao {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--cor-secundaria-branco);
 }
 
 .cta-area-final p {
-    max-width: 760px;
+    max-width: 960px;
     margin: 20px auto 30px;
-    font-size: 18px;
-    color: var(--cor-cinza-escuro);
+    font-size: 15px;
+    color: var(--cor-secundaria-branco);
     line-height: 1.8;
 }
 
 .cta-area-final .btn-whatsapp {
     background: var(--cor-dourado);
-    color: var(--cor-primaria);
+    color: var(--cor-primaria-preto);
 }
