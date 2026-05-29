@@ -58,13 +58,21 @@ body {
            NAVBAR
         =================================== */
 .navbar {
-    background: var(--cor-primaria-preto);
+    background: transparent;
     color: var(--cor-secundaria-branco);
     padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 999;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    transition: background-color 0.35s ease, box-shadow 0.35s ease,
+        backdrop-filter 0.35s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 10, 0.82);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.18);
 }
 
 .navbar .container {
@@ -78,6 +86,37 @@ body {
     font-weight: 700;
     color: var(--cor-dourado);
     margin: 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-logo {
+    width: auto;
+    height: 54px;
+    display: block;
+    object-fit: contain;
+}
+
+.navbar-brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.1;
+}
+
+.navbar-brand-text span {
+    margin-top: 2px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.82);
+    text-align: center;
+    white-space: nowrap;
 }
 
 .navbar-menu {
@@ -117,14 +156,18 @@ body {
            HERO SECTION - AJUSTES MOBILE
         =================================== */
 .hero {
-    height: 100vh;
-    min-height: 90vh;
-    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    height: 110vh;
+    background: url('../image/bg-hero.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding: 60px 0;
+    padding: 0;
+}
+
+.hero .container {
+    width: 100%;
+    max-width: none;
 }
 
 .hero::before {
@@ -134,15 +177,19 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(212,175,55,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-    opacity: 0.3;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.72) 0%,
+            rgba(0, 0, 0, 0.58) 100%);
+    opacity: 1;
 }
 
 .hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    min-height: 100vh;
+    display: flex;
     align-items: center;
+    width: 100%;
+    max-width: 600px;
+    justify-content: space-between;
     position: relative;
     z-index: 2;
 }
@@ -154,34 +201,19 @@ body {
     line-height: 1.2;
     margin-bottom: 25px;
     letter-spacing: -1px;
-}
+    max-width: 100%;
+    text-align: left;
+    margin-left: 20px;
 
-.hero-text h1 span {
-    color: var(--cor-dourado);
 }
 
 .hero-text p {
     font-size: 20px;
     color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 35px;
+    margin-bottom: 0;
     font-weight: 400;
     line-height: 1.7;
-}
-
-.hero-image {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-image img {
-    width: 80%;
-    height: 80%;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
-    border: 3px solid var(--cor-dourado);
-    object-fit: cover;
+    margin-left: 20px;
 }
 
 /* ===================================
@@ -765,27 +797,12 @@ footer {
 @media (max-width: 992px) {
 
     /* Ajustes para tablets grandes */
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
     .hero-text h1 {
         font-size: 40px;
-        text-align: center;
     }
 
     .hero-text p {
         font-size: 18px;
-        text-align: center;
-    }
-
-    .hero-image {
-        order: -1;
-    }
-
-    .hero-image img {
-        max-width: 400px;
     }
 
     .sobre-content {
@@ -836,8 +853,7 @@ footer {
     }
 
     .hero {
-        padding: 80px 0 60px;
-        min-height: auto;
+        height: 100vh;
     }
 
     .hero-text h1 {
@@ -847,10 +863,6 @@ footer {
 
     .hero-text p {
         font-size: 17px;
-    }
-
-    .hero-image img {
-        max-width: 350px;
     }
 
     .secao-titulo {
@@ -950,7 +962,7 @@ footer {
 
     /* Ajustes para celulares */
     .hero {
-        padding: 60px 0 40px;
+        height: 100vh;
     }
 
     .hero-text h1 {
@@ -960,11 +972,7 @@ footer {
 
     .hero-text p {
         font-size: 16px;
-        margin-bottom: 25px;
-    }
-
-    .hero-image img {
-        max-width: 300px;
+        margin-bottom: 0;
     }
 
     .secao-titulo {
@@ -1064,10 +1072,6 @@ footer {
     /* Ajustes para celulares muito pequenos */
     .hero-text h1 {
         font-size: 22px;
-    }
-
-    .hero-image img {
-        max-width: 250px;
     }
 
     .secao-titulo {

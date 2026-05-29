@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    const updateNavbarState = () => {
+        if (!navbar) {
+            return;
+        }
+
+        navbar.classList.toggle('scrolled', window.scrollY > 20);
+    };
+
+    updateNavbarState();
+    window.addEventListener('scroll', updateNavbarState, { passive: true });
+
     const faqTabsContainer = document.querySelector('[data-faq-tabs]');
     const faqTabs = faqTabsContainer
         ? Array.from(faqTabsContainer.querySelectorAll('[data-faq-tab]'))
