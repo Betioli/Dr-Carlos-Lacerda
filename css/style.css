@@ -447,7 +447,7 @@ body {
     position: relative;
     display: inline-flex;
     gap: 10px;
-    padding: 3px;
+    padding: 2px;
     margin: 5px 0 28px;
     border-radius: 999px;
     background: rgba(0, 0, 0, 0.35);
@@ -458,7 +458,7 @@ body {
 
 .faq-tabs-indicator {
     position: absolute;
-    inset: 8px auto 8px 8px;
+    inset: 8px auto 8px 0;
     width: 50%;
     border-radius: 999px;
     background: linear-gradient(135deg, var(--cor-dourado), #f3dc8f);
