@@ -15,6 +15,7 @@
             --cor-cinza: #f5f5f5;
             --cor-cinza-escuro: #333333;
             --espacamento-secao: 80px;
+            --cor-midnigt: #252c37;
         }
 
         body {
@@ -28,7 +29,7 @@
            UTILITÁRIOS
         =================================== */
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -190,6 +191,8 @@
         .secao-areas {
             padding: var(--espacamento-secao) 0;
             background: var(--cor-secundaria-branco);
+            height: 100vh;
+
         }
 
         .secao-titulo {
@@ -232,7 +235,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
-            max-width: 900px;
+            max-width: 700px;
             margin: 50px 0 0;
         }
 
@@ -281,9 +284,6 @@
         =================================== */
         .secao-resolve {
             padding: var(--espacamento-secao) 0;
-            background-image: url('banner.jpg');
-            background-size: cover;
-            background-position: center;
             position: relative;
         }
 
@@ -294,7 +294,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.88);
+            background: #252c37;
         }
 
         .secao-resolve .container {
@@ -307,8 +307,8 @@
         }
 
         .secao-subtitulo {
-            font-size: 18px;
-            color: var(--cor-cinza-escuro);
+            font-size: 15px;
+            color: var(--cor-secundaria-branco);
             text-align: left;
             margin-bottom: 40px;
             font-weight: 400;
@@ -316,17 +316,17 @@
         }
 
         .resolve-lista {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .resolve-item {
             background: rgba(255, 255, 255, 0.95);
-            padding: 30px 40px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: 500;
+            padding: 15px 40px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 400;
             color: var(--cor-primaria-preto);
             position: relative;
             padding-left: 80px;
@@ -337,7 +337,7 @@
             font-size: 20px;
             font-weight: 700;
             color: var(--cor-primaria-preto);
-            margin-bottom: 12px;
+            margin-bottom: px;
         }
 
         .resolve-item p {
@@ -429,26 +429,29 @@
         =================================== */
         .secao-faq {
             padding: var(--espacamento-secao) 0;
-            background: var(--cor-secundaria-branco);
+            background: url('../image/BG-FAQ.jpg') center/cover;
         }
 
         .faq-container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
         }
-
+        .secao-titulo-faq {
+            color: var(--cor-secundaria-branco);
+            text-align: left;
+        }
         .faq-item {
             background: var(--cor-cinza-escuro);
             margin-bottom: 20px;
-            border-radius: 12px;
+            border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
         }
 
         .faq-pergunta {
-            padding: 25px 30px;
-            font-size: 20px;
-            font-weight: 600;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: 500;
             color: var(--cor-secundaria-branco);
             cursor: pointer;
             position: relative;
@@ -483,9 +486,10 @@
 
         .faq-resposta-inner {
             padding: 0 30px 25px 30px;
-            font-size: 17px;
+            font-size: 15px;
             line-height: 1.7;
             color: var(--cor-secundaria-branco);
+            font-weight: 400;   
         }
 
         .faq-item.active .faq-resposta {
