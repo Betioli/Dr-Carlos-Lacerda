@@ -473,14 +473,17 @@ body {
            SEÇÃO - ONDE ESTAMOS
         =================================== */
 .secao-onde-estamos {
-    padding: 0 0 2rem 0;
-    background: var(--cor-);
+    padding: 0;
+    background: #77603E;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    min-height: 48vh;
 }
 
 .secao-onde-estamos .container {
     position: relative;
     z-index: 2;
+    max-width: none;
     padding: 0;
 }
 
@@ -500,7 +503,7 @@ body {
     grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
     align-items: center;
     justify-content: space-between;
-    min-height: 40vh;
+    min-height: 48vh;
     overflow: hidden;
     border-radius: 0;
     background: transparent;
@@ -508,6 +511,8 @@ body {
     box-shadow: none;
     padding: 0;
     width: 100%;
+    width: calc(100% - 84px);
+    margin-left: 84px;
 }
 
 .onde-react-copy {
@@ -519,7 +524,7 @@ body {
 .onde-react-text {
     margin-top: 16px;
     max-width: 640px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     color: var(--cor-secundaria-branco);
     font-weight: 300;
@@ -528,9 +533,9 @@ body {
 
 .onde-globe-shell {
     position: absolute;
-    right: -16%;
-    bottom: -28%;
-    width: min(65vw, 920px);
+    right: -15%;
+    bottom: -88%;
+    width: min(42vw, 680px);
     aspect-ratio: 1 / 1;
     pointer-events: none;
     z-index: 1;
@@ -549,8 +554,8 @@ body {
 .onde-react-globe {
     position: absolute;
     inset: 0;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
 }
 
 .onde-react-globe-canvas {
@@ -910,6 +915,8 @@ footer {
         grid-template-columns: 1fr;
         min-height: 42vh;
         gap: 18px;
+        width: 100%;
+        margin-left: 0;
     }
 
     .onde-react-copy {
@@ -917,9 +924,9 @@ footer {
     }
 
     .onde-globe-shell {
-        right: -24%;
-        bottom: -34%;
-        width: min(82vw, 760px);
+        right: -18%;
+        bottom: -36%;
+        width: min(72vw, 700px);
     }
 
     .sobre-content {
@@ -1121,6 +1128,8 @@ footer {
     .onde-react-card {
         min-height: 42vh;
         gap: 14px;
+        width: 100%;
+        margin-left: 0;
     }
 
     .onde-react-copy {
@@ -1128,9 +1137,9 @@ footer {
     }
 
     .onde-globe-shell {
-        right: -34%;
-        bottom: -44%;
-        width: 98vw;
+        right: -24%;
+        bottom: -42%;
+        width: 108vw;
     }
 
     .onde-react-title {
