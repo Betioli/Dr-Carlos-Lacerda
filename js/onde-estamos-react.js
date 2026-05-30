@@ -103,7 +103,7 @@ function OndeEstamosSection() {
             h(
                 'p',
                 { className: 'onde-react-text' },
-                'Nosso escritório está localizado na cidade de Jaboticabal, SP, cobrindo toda a região, e também com atendimento online em todo o território nacional brasileiro.',
+                'Nosso escritório está localizado na cidade de Jaboticabal, SP, cobrindo toda a região, e também com atendimento online em todo o território nacional Brasileiro.',
             ),
         ),
         h(

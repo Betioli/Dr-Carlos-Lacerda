@@ -18,8 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const faqIndicator = faqTabsContainer
         ? faqTabsContainer.querySelector('.faq-tabs-indicator')
         : null;
+    const faqContainer = document.querySelector('.faq-container');
     const faqPanels = Array.from(document.querySelectorAll('[data-faq-panel]'));
     const faqItems = Array.from(document.querySelectorAll('.faq-item'));
+    let faqHeightFrame = 0;
 
     const positionIndicator = () => {
         if (!faqTabsContainer || !faqIndicator || !faqTabs.length) {
@@ -41,6 +43,31 @@ document.addEventListener('DOMContentLoaded', () => {
         faqItems.forEach((item) => item.classList.remove('active'));
     };
 
+    const getActiveFaqPanel = () =>
+        faqPanels.find((faqPanel) => faqPanel.classList.contains('is-active')) ??
+        faqPanels[0] ??
+        null;
+
+    const syncFaqContainerHeight = () => {
+        if (!faqContainer) {
+            return;
+        }
+
+        const activePanel = getActiveFaqPanel();
+
+        if (!activePanel) {
+            faqContainer.style.height = '';
+            return;
+        }
+
+        faqContainer.style.height = `${activePanel.scrollHeight}px`;
+    };
+
+    const requestFaqHeightSync = () => {
+        window.cancelAnimationFrame(faqHeightFrame);
+        faqHeightFrame = window.requestAnimationFrame(syncFaqContainerHeight);
+    };
+
     const setActiveFaqTab = (tabKey) => {
         faqTabs.forEach((tab) => {
             const isActive = tab.dataset.faqTab === tabKey;
@@ -54,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         closeAllFaqItems();
         requestAnimationFrame(positionIndicator);
+        requestFaqHeightSync();
     };
 
     faqTabs.forEach((tab) => {
@@ -90,6 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isActive) {
                 item.classList.add('active');
             }
+
+            requestFaqHeightSync();
         });
     });
 
@@ -106,6 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const observer = new ResizeObserver(positionIndicator);
         observer.observe(faqTabsContainer);
     }
+
+    window.addEventListener('resize', requestFaqHeightSync, { passive: true });
+    requestFaqHeightSync();
 
     if (!('IntersectionObserver' in window)) {
         return;

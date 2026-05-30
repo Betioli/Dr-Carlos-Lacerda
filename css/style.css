@@ -497,6 +497,15 @@ body {
     text-transform: uppercase;
 }
 
+.onde-kicker:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, var(--cor-dourado) 50%, var(--cor-primaria-preto) 50%);
+    margin-top: 15px;
+}
+
 .onde-react-card {
     position: relative;
     display: grid;
@@ -519,6 +528,7 @@ body {
     position: relative;
     z-index: 2;
     max-width: 620px;
+    margin: 0 0 0 30px;
 }
 
 .onde-react-text {
@@ -529,6 +539,7 @@ body {
     color: var(--cor-secundaria-branco);
     font-weight: 300;
     letter-spacing: 1px;
+    z-index: 3;
 }
 
 .onde-globe-shell {
@@ -572,8 +583,11 @@ body {
 }
 
 .faq-container {
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
+    transition: height 0.45s ease;
+    min-height: 200px;
 }
 
 .secao-titulo-faq {
@@ -630,19 +644,20 @@ body {
 }
 
 .faq-panel {
-    max-height: 0;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: auto;
     overflow: hidden;
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(28px);
     pointer-events: none;
     transition:
-        max-height 0.55s ease,
         opacity 0.45s ease,
-        transform 0.45s ease;
+        transform 1.95s ease;
 }
 
 .faq-panel.is-active {
-    max-height: 5000px;
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
@@ -659,11 +674,12 @@ body {
 .faq-pergunta {
     padding: 15px 20px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 300;
     color: var(--cor-secundaria-branco);
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
+    letter-spacing: 1px;
 }
 
 .faq-pergunta:hover {
@@ -1036,10 +1052,6 @@ footer {
         flex: 1;
         padding: 13px 18px;
         font-size: 14px;
-    }
-
-    .faq-panel {
-        max-height: 0;
     }
 
     .areas-grid {
