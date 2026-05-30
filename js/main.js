@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const elementosAnimados = document.querySelectorAll(
-        '.consequencia-card, .diferencial-card, .problema-card, .resolve-item, .faq-item'
+        '.consequencia-card, .diferencial-card, .problema-card, .resolve-item, .onde-react-card, .onde-react-copy, .onde-react-globe, .faq-item'
     );
 
     if (!elementosAnimados.length) {

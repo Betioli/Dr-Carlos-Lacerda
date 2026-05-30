@@ -1,0 +1,119 @@
+import React, { useCallback, useEffect, useRef } from 'https://esm.sh/react@18.3.1';
+import { createRoot } from 'https://esm.sh/react-dom@18.3.1/client';
+import createGlobe from 'https://esm.sh/cobe';
+
+const h = React.createElement;
+
+const GLOBE_CONFIG = {
+    width: 800,
+    height: 800,
+    onRender: () => {},
+    devicePixelRatio: 2,
+    phi: 0,
+    theta: 0.3,
+    dark: 0,
+    diffuse: 0.4,
+    mapSamples: 16000,
+    mapBrightness: 1.2,
+    baseColor: [1, 1, 1],
+    markerColor: [251 / 255, 100 / 255, 21 / 255],
+    glowColor: [1, 1, 1],
+    markers: [
+        { location: [14.5995, 120.9842], size: 0.03 },
+        { location: [19.076, 72.8777], size: 0.1 },
+        { location: [23.8103, 90.4125], size: 0.05 },
+        { location: [30.0444, 31.2357], size: 0.07 },
+        { location: [39.9042, 116.4074], size: 0.08 },
+        { location: [-23.5505, -46.6333], size: 0.1 },
+        { location: [19.4326, -99.1332], size: 0.1 },
+        { location: [40.7128, -74.006], size: 0.1 },
+        { location: [34.6937, 135.5022], size: 0.05 },
+        { location: [41.0082, 28.9784], size: 0.06 },
+    ],
+};
+
+function Globe({ className = '', config = GLOBE_CONFIG }) {
+    let phi = 0;
+    let width = 0;
+    const canvasRef = useRef(null);
+
+    const onRender = useCallback(
+        (state) => {
+            phi += 0.005;
+            state.phi = phi;
+            state.width = width * 2;
+            state.height = width * 2;
+        },
+        [],
+    );
+
+    useEffect(() => {
+        const canvas = canvasRef.current;
+
+        if (!canvas) {
+            return undefined;
+        }
+
+        const resize = () => {
+            width = canvas.offsetWidth || 640;
+        };
+
+        window.addEventListener('resize', resize);
+        resize();
+
+        const globe = createGlobe(canvas, {
+            ...config,
+            width: width * 2,
+            height: width * 2,
+            onRender,
+        });
+
+        const timer = window.setTimeout(() => {
+            canvas.style.opacity = '1';
+        }, 0);
+
+        return () => {
+            window.clearTimeout(timer);
+            window.removeEventListener('resize', resize);
+            globe.destroy();
+        };
+    }, [config, onRender]);
+
+    return h(
+        'div',
+        { className: `onde-react-globe ${className}`.trim() },
+        h('canvas', {
+            ref: canvasRef,
+            className: 'onde-react-globe-canvas',
+        }),
+    );
+}
+
+function OndeEstamosSection() {
+    return h(
+        'div',
+        { className: 'onde-react-card' },
+        h(
+            'div',
+            { className: 'onde-react-copy' },
+            h('span', { className: 'onde-kicker' }, 'Atendimento presencial e online'),
+            h('h2', { className: 'onde-react-title' }, 'Onde estamos'),
+            h(
+                'p',
+                { className: 'onde-react-text' },
+                'Nosso escritório está localizado na cidade de Jaboticabal, SP, cobrindo toda a região, e também com atendimento online em todo o território nacional.',
+            ),
+        ),
+        h(
+            'div',
+            { className: 'onde-globe-shell', 'aria-hidden': 'true' },
+            h(Globe, null),
+        ),
+    );
+}
+
+const mountNode = document.getElementById('onde-estamos-react');
+
+if (mountNode) {
+    createRoot(mountNode).render(h(OndeEstamosSection));
+}

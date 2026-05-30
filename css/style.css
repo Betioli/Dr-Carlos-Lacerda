@@ -115,7 +115,7 @@ body {
     font-family: 'Libre Baskerville', serif;
     font-size: 8px;
     font-weight: 400;
-    letter-spacing: 0.02em;
+    letter-spacing: 2px;
     color: rgba(255, 255, 255, 0.82);
     text-align: center;
     white-space: nowrap;
@@ -221,6 +221,13 @@ body {
     margin-left: 20px;
 }
 
+.hero-text p span {
+    font-weight: 500;
+    color: var(--cor-primaria-preto);
+    background: var(--cor-dourado);
+    padding: 1px 4px;
+}
+
 /* ===================================
            SEÇÃO - ÁREAS DE ATUAÇÃO
            TÍTULOS MENORES PARA MOBILE
@@ -233,8 +240,8 @@ body {
 }
 
 .secao-titulo {
-    font-size: 35px;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 500;
     text-align: left;
     margin-bottom: 20px;
     color: var(--cor-cinza-escuro);
@@ -463,8 +470,97 @@ body {
 }
 
 /* ===================================
-           SEÇÃO - FAQ
+           SEÇÃO - ONDE ESTAMOS
         =================================== */
+.secao-onde-estamos {
+    padding: 0 0 2rem 0;
+    background: var(--cor-);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.secao-onde-estamos .container {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+}
+
+.onde-kicker {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--cor-dourado);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.onde-react-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
+    align-items: center;
+    justify-content: space-between;
+    min-height: 40vh;
+    overflow: hidden;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    width: 100%;
+}
+
+.onde-react-copy {
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
+}
+
+.onde-react-text {
+    margin-top: 16px;
+    max-width: 640px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--cor-secundaria-branco);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.onde-globe-shell {
+    position: absolute;
+    right: -16%;
+    bottom: -28%;
+    width: min(65vw, 920px);
+    aspect-ratio: 1 / 1;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.onde-globe-shell::before {
+    content: '';
+    position: absolute;
+    inset: 8%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.26) 36%, rgba(255, 255, 255, 0) 70%);
+    filter: blur(16px);
+    opacity: 0.95;
+}
+
+.onde-react-globe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.onde-react-globe-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
 .secao-faq {
     padding: var(--espacamento-secao) 0;
     background: url('../image/BG-FAQ.jpg') center/cover;
@@ -810,6 +906,22 @@ footer {
         font-size: 18px;
     }
 
+    .onde-react-card {
+        grid-template-columns: 1fr;
+        min-height: 42vh;
+        gap: 18px;
+    }
+
+    .onde-react-copy {
+        max-width: 100%;
+    }
+
+    .onde-globe-shell {
+        right: -24%;
+        bottom: -34%;
+        width: min(82vw, 760px);
+    }
+
     .sobre-content {
         grid-template-columns: 1fr;
         gap: 50px;
@@ -884,6 +996,10 @@ footer {
     .resolve-item::before {
         left: 20px;
         font-size: 28px;
+    }
+
+    .onde-react-text {
+        font-size: 18px;
     }
 
     .secao-subtitulo {
@@ -998,6 +1114,34 @@ footer {
         font-size: 15px;
     }
 
+    .onde-kicker {
+        font-size: 12px;
+    }
+
+    .onde-react-card {
+        min-height: 42vh;
+        gap: 14px;
+    }
+
+    .onde-react-copy {
+        max-width: 100%;
+    }
+
+    .onde-globe-shell {
+        right: -34%;
+        bottom: -44%;
+        width: 98vw;
+    }
+
+    .onde-react-title {
+        font-size: 30px;
+    }
+
+    .onde-react-text {
+        font-size: 16px;
+        line-height: 1.35;
+    }
+
     .secao-subtitulo {
         font-size: 15px;
         margin-bottom: 25px;
@@ -1095,6 +1239,7 @@ footer {
         left: 15px;
         font-size: 24px;
     }
+
 }
 
 /* ===================================
