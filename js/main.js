@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const elementosAnimados = document.querySelectorAll(
-        '.consequencia-card, .diferencial-card, .problema-card, .resolve-item, .onde-react-card, .onde-react-copy, .onde-react-globe, .faq-item'
+        '.consequencia-card, .diferencial-card, .problema-card, .resolve-item, .onde-react-card, .onde-react-copy, .onde-react-globe, .portal-texto, .card-artigo, .faq-item'
     );
 
     if (!elementosAnimados.length) {

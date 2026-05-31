@@ -728,19 +728,179 @@ body {
     background: var(--cor-cinza);
 }
 
-.portal-placeholder {
-    padding: 40px;
-    border-radius: 18px;
-    background: var(--cor-secundaria-branco);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+.portal-grid {
+    display: grid;
+    grid-template-columns: 400px minmax(0, 1fr);
+    gap: 80px;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.portal-placeholder p {
-    max-width: 760px;
-    font-size: 18px;
-    line-height: 1.8;
+.portal-texto {
+    max-width: 400px;
+}
+
+.portal-texto .secao-titulo {
+    font-size: 28px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 20px;
     color: var(--cor-cinza-escuro);
+    line-height: 1.3;
+}
+
+.portal-subtitulo {
+    font-size: 16px;
+    color: var(--cor-cinza-escuro);
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.portal-carrossel-wrapper {
+    width: 100%;
+}
+
+.portal-carrossel-wrapper [data-carrossel] {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.portal-carrossel-wrapper .carrossel-wrapper {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    scrollbar-width: none;
+}
+
+.portal-carrossel-wrapper .carrossel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.portal-carrossel-wrapper .card-artigo {
+    flex: 0 0 280px;
+    background: var(--cor-secundaria-branco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.portal-carrossel-wrapper .card-artigo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15);
+}
+
+.portal-carrossel-wrapper .card-artigo-image {
+    width: 100%;
+    height: 180px;
+    background: var(--cor-cinza-escuro);
+    object-fit: cover;
+    display: block;
+}
+
+.portal-carrossel-wrapper .card-artigo-content {
+    padding: 20px;
+}
+
+.portal-carrossel-wrapper .card-artigo-categoria {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cor-dourado);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.portal-carrossel-wrapper .card-artigo-titulo {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--cor-primaria-preto);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.portal-carrossel-wrapper .card-artigo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--cor-dourado);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: gap 0.3s ease;
+}
+
+.portal-carrossel-wrapper .card-artigo-link:hover {
+    gap: 12px;
+}
+
+.portal-carrossel-wrapper .card-artigo-link::after {
+    content: '→';
+}
+
+.portal-carrossel-wrapper .seta-carrossel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--cor-dourado);
+    color: var(--cor-primaria-preto);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.portal-carrossel-wrapper .seta-carrossel:hover {
+    background: var(--cor-dourado-escuro);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.portal-carrossel-wrapper .seta-carrossel:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.portal-carrossel-wrapper .seta-prev {
+    left: -30px;
+}
+
+.portal-carrossel-wrapper .seta-next {
+    right: -30px;
+}
+
+.portal-botao-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-ver-todos {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background: var(--cor-dourado);
+    color: var(--cor-primaria-preto);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-ver-todos:hover {
+    background: var(--cor-dourado-escuro);
+    transform: translateY(-2px);
 }
 
 /* ===================================
@@ -1059,12 +1219,33 @@ footer {
         gap: 30px;
     }
 
-    .portal-placeholder {
-        padding: 30px 25px;
+    .portal-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .portal-placeholder p {
-        font-size: 16px;
+    .portal-texto {
+        max-width: 100%;
+    }
+
+    .portal-texto .secao-titulo {
+        font-size: 26px;
+    }
+
+    .portal-subtitulo {
+        font-size: 15px;
+    }
+
+    .portal-carrossel-wrapper .card-artigo {
+        flex: 0 0 260px;
+    }
+
+    .portal-carrossel-wrapper .seta-prev {
+        left: -18px;
+    }
+
+    .portal-carrossel-wrapper .seta-next {
+        right: -18px;
     }
 
     .secao-cta p {
@@ -1161,6 +1342,27 @@ footer {
     .onde-react-text {
         font-size: 16px;
         line-height: 1.35;
+    }
+
+    .portal-texto .secao-titulo {
+        font-size: 24px;
+    }
+
+    .portal-subtitulo {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .portal-carrossel-wrapper .card-artigo {
+        flex: 0 0 240px;
+    }
+
+    .portal-carrossel-wrapper .card-artigo-image {
+        height: 170px;
+    }
+
+    .portal-botao-wrapper {
+        justify-content: flex-start;
     }
 
     .secao-subtitulo {
