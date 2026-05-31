@@ -182,8 +182,8 @@ body {
     right: 0;
     bottom: 0;
     background: linear-gradient(180deg,
-            rgba(0, 0, 0, 0.72) 0%,
-            rgba(0, 0, 0, 0.58) 100%);
+
+            rgba(0, 0, 0, 0.72) 100%);
     opacity: 1;
 }
 

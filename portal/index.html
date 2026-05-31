@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/portal.css" />
+    <title>Portal de Conteúdo | Dr. Carlos Lacerda</title>
+    <meta
+      name="description"
+      content="Artigos sobre inventário, herança, família, imóveis e documentos com orientação jurídica clara e objetiva."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../image/imagem-hero2.jpg" />
+  </head>
+  <body class="pagina-portal">
+    <nav class="navbar">
+      <div class="container">
+        <a href="../index.html" class="navbar-brand">
+          <img
+            src="../image/Logo-nav-bar.png"
+            alt="Logo Dr. Carlos Augusto Dias Lacerda"
+            class="navbar-logo"
+          />
+          <div class="navbar-brand-text">
+            <h2>Dr. Carlos Augusto Dias Lacerda</h2>
+            <span>Advocacia e assessoria jurídica</span>
+          </div>
+        </a>
+
+        <ul class="navbar-menu">
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#areas">Áreas de Atuação</a></li>
+          <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+          <li><a href="../index.html#faq">FAQ</a></li>
+          <li><a href="../index.html#sobre">Sobre Nós</a></li>
+          <li><a href="./index.html" class="active">Portal de conteúdo</a></li>
+          <li>
+            <a href="../index.html#contato" class="navbar-cta">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="portal-page-container">
+      <div class="container">
+        <section class="portal-header" id="portal">
+          <!--p class="portal-kicker">Portal</p-->
+          <h1>Conteúdo jurídico para decidir com mais segurança</h1>
+          <p>
+            Reunimos artigos sobre inventário, herança, família, imóveis e
+            documentação para ajudar você a entender o cenário, organizar os
+            próximos passos e conversar com mais clareza sobre o seu caso.
+          </p>
+        </section>
+
+        <section class="portal-busca" aria-labelledby="portal-busca-titulo">
+          <div class="busca-container">
+            <div class="busca-topo">
+              <h2 id="portal-busca-titulo">Buscar artigos</h2>
+              <p>
+                Filtre por área de atuação ou por palavra-chave para localizar o
+                tema com mais rapidez.
+              </p>
+            </div>
+
+            <div
+              class="busca-form"
+              role="search"
+              aria-label="Filtro de artigos"
+            >
+              <div class="busca-field">
+                <label for="busca-area">Área de atuação</label>
+                <select id="busca-area" class="busca-select">
+                  <option value="">Todas as áreas</option>
+                  <option value="familia">Família e Sucessão</option>
+                  <option value="imobiliario">Direito Imobiliário</option>
+                  <option value="consultoria">Consultoria Jurídica</option>
+                </select>
+              </div>
+
+              <div class="busca-field">
+                <label for="busca-palavra">Palavra-chave</label>
+                <input
+                  type="text"
+                  id="busca-palavra"
+                  class="busca-input"
+                  placeholder="Ex.: inventário, contrato, herança..."
+                />
+              </div>
+
+              <div class="busca-acoes">
+                <button id="btn-buscar" class="btn-buscar" type="button">
+                  Buscar
+                </button>
+                <button id="btn-limpar" class="btn-limpar" type="button">
+                  Limpar
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="portal-artigos" aria-labelledby="portal-artigos-titulo">
+          <div class="portal-artigos-header">
+            <h2 id="portal-artigos-titulo">12 artigos desta página</h2>
+            <p>
+              Os cards abaixo já estão estruturados para o filtro em tempo real
+              da Parte 3.
+            </p>
+          </div>
+
+          <div class="artigos-grid">
+            <article
+              class="card-artigo-portal"
+              data-id="portal-001"
+              data-area="familia"
+              data-keywords="inventario, heranca, bens, documentos, processo"
+            >
+              <img
+                class="card-artigo-image"
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80"
+                alt="Mesa com documentos e caneta para inventário"
+                loading="lazy"
+              />
+              <div class="card-artigo-content">
+                <div class="card-artigo-categoria">Inventário</div>
+                <h3 class="card-artigo-titulo">
+                  Inventário: por onde começar e quais documentos reunir
+                </h3>
+                <a class="card-artigo-link" href="./artigo-001/">Ler mais</a>
+              </div>
+            </article>
+
+            <article
+              class="card-artigo-portal"
+              data-id="portal-002"
+              data-area="familia"
+              data-keywords="heranca, herdeiros, sucessao, partilha, direitos"
+            >
+              <img
+                class="card-artigo-image"
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
+                alt="Pessoas reunidas em discussão sobre herança"
+                loading="lazy"
+              />
+              <div class="card-artigo-content">
+                <div class="card-artigo-categoria">Herança</div>
+                <h3 class="card-artigo-titulo">
+                  Herança: direitos dos herdeiros e pontos de atenção
+                </h3>
+                <a class="card-artigo-link" href="./artigo-002/">Ler mais</a>
+              </div>
+            </article>
+
+            <article
+              class="card-artigo-portal"
+              data-id="portal-003"
+              data-area="familia"
+              data-keywords="testamento, vontade, familia, sucessao, documentos"
+            >
+              <img
+                class="card-artigo-image"
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                alt="Documento aberto em mesa de escritório"
+                loading="lazy"
+              />
+              <div class="card-artigo-content">
+                <div class="card-artigo-categoria">Testamento</div>
+                <h3 class="card-artigo-titulo">
+                  Como organizar sua vontade patrimonial com antecedência
+                </h3>
+                <a class="card-artigo-link" href="./artigo-003/">Ler mais</a>
+              </div>
+            </article>
+
+            <article
+              class="card-artigo-portal"
+              data-id="portal-004"
+              data-area="familia"
+              data-keywords="partilha, bens, acordo, familia, inventario"
+            >
+              <img
+                class="card-artigo-image"
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80"
+                alt="Pessoas analisando divisão de bens"
+                loading="lazy"
+              />
+              <div class="card-artigo-content">
+                <div class="card-artigo-categoria">Partilha</div>
+                <h3 class="card-artigo-titulo">
+                  Partilha de bens: documentos que costumam fazer diferença
+                </h3>
+                <a class="card-artigo-link" href="./artigo-004/">Ler mais</a>
+              </div>
+            </article>
+
+            <article
+              class="card-artigo-portal"
+              data-id="portal-005"
+              data-area="imobiliario"
+              data-keywords="compra, venda, imovel, escritura, contrato"
+            >
+              <img
+                class="card-artigo-image"
+                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80"
+                alt="Casa e chave sobre uma mesa"
+                loading="lazy"
+              />
+              <div class="card-artigo-content">
+                <div class="card-artigo-categoria">Imóvel</div>
+                <h3 class="card-artigo-titulo">
+                  Cuidados essenciais na compra e venda de imóvel
+                </h3>
+                <a class="card-artigo-link" href="./artigo-005/">Ler mais</a>
+              </div>
+            </article>
+
+            <article
+              class="card-artigo-portal"
+              data-id="portal-006"
+              data-area="imobiliario"
+              data-keywords="contrato, clausulas, locacao, imovel, documentos"
+            >
+              <img
+                class="card-artigo-image"
+                src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80"
+                alt="Assinatura de contrato com documentos sobre a mesa"
+                loading="lazy"
+              />
+              <div class="card-artigo-content">
+                <div class="card-artigo-categoria">Contrato</div>
+                <h3 class="card-artigo-titulo">
+                  O que revisar antes de assinar um contrato imobiliário
+                </h3>
+                <a class="card-artigo-link" href="./artigo-006/">Ler mais</a>
+              </div>
+            </article>
+
+            <article
+              class="card-artigo-portal"
+              data-id="portal-007"
+              data-area="imobiliario"
+              data-keywords="propriedade, registro, cartorio, matricula, imovel"
+            >
+              <img
+                class="card-artigo-image"
+                src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80"
+                alt="Prédio com fachada residencial e foco em propriedade"
+                loading="lazy"
+              />
+              <div class="card-artigo-content">
+                <div class="card-artigo-categoria">Propriedade</div>
+                <h3 class="card-artigo-titulo">
+                  Registro e propriedade: quando o imóvel fica realmente seguro
+                </h3>
+                <a class="card-artigo-link" href="./artigo-007/">Ler mais</a>
+              </div>
+            </article>
+
+            <article
+              class="card-artigo-portal"
+              data-id="portal-008"
+              data-area="imobiliario"
+              data-keywords="regularizacao, imovel, propriedade, documentos, matricula"
+            >
+              <img
+                class="card-artigo-image"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                alt="Documentos e planta de imóvel em análise"
+                loading="lazy"
+              />
+              <div class="card-artigo-content">
+                <div class="card-artigo-categoria">Regularização</div>
+                <h3 class="card-artigo-titulo">
+                  Imóvel irregular: caminhos para regularizar a situação
+                </h3>
+                <a class="card-artigo-link" href="./artigo-008/">Ler mais</a>
+              </div>
+            </article>
+
+            <article
+              class="card-artigo-portal"
+              data-id="portal-009"
+              data-area="consultoria"
+              data-keywords="consultoria, planejamento, patrimonial, familia, sucessao"
+            >
+              <img
+                class="card-artigo-image"
+                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80"
+                alt="Profissionais reunidos em planejamento jurídico"
+                loading="lazy"
+              />
+              <div class="card-artigo-content">
+                <div class="card-artigo-categoria">Planejamento</div>
+                <h3 class="card-artigo-titulo">
+                  Planejamento patrimonial: por que conversar antes evita
+                  conflito
+                </h3>
+                <a class="card-artigo-link" href="./artigo-009/">Ler mais</a>
+              </div>
+            </article>
+
+            <article
+              class="card-artigo-portal"
+              data-id="portal-010"
+              data-area="consultoria"
+              data-keywords="consultoria, documentos, certidoes, analise, orientacao"
+            >
+              <img
+                class="card-artigo-image"
+                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80"
+                alt="Mesa com documentos organizados para análise"
+                loading="lazy"
+              />
+              <div class="card-artigo-content">
+                <div class="card-artigo-categoria">Documentos</div>
+                <h3 class="card-artigo-titulo">
+                  Como organizar documentos antes de procurar orientação
+                </h3>
+                <a class="card-artigo-link" href="./artigo-010/">Ler mais</a>
+              </div>
+            </article>
+
+            <article
+              class="card-artigo-portal"
+              data-id="portal-011"
+              data-area="consultoria"
+              data-keywords="consultoria, mediacao, conflito, herdeiros, acordo"
+            >
+              <img
+                class="card-artigo-image"
+                src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=800&q=80"
+                alt="Discussão orientada para mediação e acordo"
+                loading="lazy"
+              />
+              <div class="card-artigo-content">
+                <div class="card-artigo-categoria">Mediação</div>
+                <h3 class="card-artigo-titulo">
+                  Conflitos familiares: quando a mediação ajuda a destravar
+                </h3>
+                <a class="card-artigo-link" href="./artigo-011/">Ler mais</a>
+              </div>
+            </article>
+
+            <article
+              class="card-artigo-portal"
+              data-id="portal-012"
+              data-area="consultoria"
+              data-keywords="consultoria, estrategia, orientacao, patrimonio, prevencao"
+            >
+              <img
+                class="card-artigo-image"
+                src="https://images.unsplash.com/photo-1577412647305-991150c7d163?auto=format&fit=crop&w=800&q=80"
+                alt="Profissional analisando estratégia com documentos"
+                loading="lazy"
+              />
+              <div class="card-artigo-content">
+                <div class="card-artigo-categoria">Análise Preventiva</div>
+                <h3 class="card-artigo-titulo">
+                  Análise preventiva: como reduzir riscos antes de decidir
+                </h3>
+                <a class="card-artigo-link" href="./artigo-012/">Ler mais</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section
+          class="portal-paginacao"
+          aria-labelledby="portal-paginacao-titulo"
+        >
+          <div class="paginacao-wrapper">
+            <h2 id="portal-paginacao-titulo" class="sr-only">
+              Paginação de artigos
+            </h2>
+            <nav class="paginacao" aria-label="Navegação de páginas">
+              <a
+                class="paginacao-prev is-disabled"
+                href="./index.html"
+                aria-disabled="true"
+                tabindex="-1"
+              >
+                <span aria-hidden="true">‹</span>
+                Anterior
+              </a>
+
+              <div class="paginacao-numeros" aria-label="Números das páginas">
+                <a
+                  class="paginacao-numero is-active"
+                  href="./index.html"
+                  aria-current="page"
+                  >1</a
+                >
+                <a class="paginacao-numero" href="./index.html?page=2">2</a>
+              </div>
+
+              <a class="paginacao-next" href="./index.html?page=2">
+                Próxima
+                <span aria-hidden="true">›</span>
+              </a>
+            </nav>
+
+            <p class="paginacao-nota">
+              Conforme o modelo em <code>pag.txt</code>, esta página usa 12
+              artigos por página e deixa a segunda página preparada para os 8
+              itens restantes.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <section class="secao-cta" id="contato">
+      <div class="container">
+        <h2 class="secao-titulo">Solicite orientação jurídica</h2>
+        <a
+          href="https://api.whatsapp.com/send/?phone=5516982057151&text=Ol%C3%A1%20Dr%20Carlos%20tudo%20j%C3%B3ia%20?%20Vim%20pelo%20site%20e%20preciso%20de%20sua%20ajuda.&type=phone_number&app_absent=0"
+          class="btn-whatsapp"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Entre em contato conosco
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Menu Rápido</h4>
+            <ul>
+              <li><a href="../index.html#home">Home</a></li>
+              <li><a href="../index.html#areas">Áreas de Atuação</a></li>
+              <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+              <li><a href="../index.html#faq">FAQ</a></li>
+              <li><a href="../index.html#sobre">Sobre Nós</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <p>WhatsApp: (16) 98205-7151</p>
+            <p>Jaboticabal - SP</p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://www.instagram.com/bms_trafego/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li><a href="#">LinkedIn</a></li>
+              <li>
+                <a
+                  href="https://api.whatsapp.com/send/?phone=5516982057151&text=Ol%C3%A1%20Dr%20Carlos%20tudo%20j%C3%B3ia%20?%20Vim%20pelo%20site%20e%20preciso%20de%20sua%20ajuda.&type=phone_number&app_absent=0"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  WhatsApp
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <a>
+              ⚖️ Aviso Legal: As informações contidas nesta página têm caráter
+              exclusivamente informativo e não constituem promessa de resultado.
+            </a>
+          </div>
+
+          <div class="footer-credits">
+            <div class="footer-left">
+              <p>&copy; 2026 Dr. Carlos Augusto Dias Lacerda - OAB/SP 327280</p>
+            </div>
+            <div class="footer-right">
+              <a
+                href="https://www.instagram.com/bms_trafego/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Desenvolvido por BMS | Gestão de Tráfego pago
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://api.whatsapp.com/send/?phone=5516982057151&text=Ol%C3%A1%20Dr%20Carlos%20tudo%20j%C3%B3ia%20?%20Vim%20pelo%20site%20e%20preciso%20de%20sua%20ajuda.&type=phone_number&app_absent=0"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Falar no WhatsApp"
+      rel="noreferrer"
+    >
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.247 1.409 1.417-5.267-0.319-0.524c-1.342-2.201-2.054-4.738-2.054-7.323 0-7.51 6.11-13.62 13.62-13.62s13.62 6.11 13.62 13.62c0 7.51-6.11 13.62-13.62 13.62zM21.305 19.26c-0.346-0.174-2.049-1.007-2.366-1.123-0.317-0.116-0.547-0.174-0.776 0.174s-0.892 1.123-1.094 1.347c-0.201 0.224-0.402 0.251-0.748 0.076-0.346-0.174-1.461-0.537-2.785-1.711-1.03-0.914-1.725-2.044-1.927-2.39-0.201-0.346-0.022-0.533 0.152-0.707 0.156-0.155 0.346-0.402 0.518-0.603 0.174-0.201 0.231-0.346 0.346-0.571 0.116-0.224 0.058-0.427-0.028-0.603s-0.776-1.87-1.063-2.565c-0.28-0.672-0.56-0.58-0.776-0.591-0.201-0.010-0.428-0.012-0.656-0.012s-0.603 0.086-0.92 0.427c-0.317 0.346-1.206 1.179-1.206 2.873s1.235 3.333 1.406 3.561c0.174 0.224 2.425 3.732 5.872 5.234 0.821 0.354 1.462 0.566 1.962 0.724 0.825 0.262 1.577 0.225 2.168 0.137 0.662-0.099 2.045-0.835 2.332-1.642 0.288-0.807 0.288-1.501 0.201-1.642-0.086-0.14-0.317-0.224-0.663-0.398z"
+        />
+      </svg>
+    </a>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
