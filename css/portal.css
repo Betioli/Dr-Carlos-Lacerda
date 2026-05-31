@@ -229,6 +229,10 @@
     color: var(--cor-primaria-preto);
 }
 
+.btn-limpar[hidden] {
+    display: none;
+}
+
 .btn-limpar:hover {
     background: rgba(0, 0, 0, 0.12);
     transform: translateY(-2px);
@@ -236,6 +240,18 @@
 
 .portal-artigos {
     margin-bottom: 44px;
+}
+
+.busca-resultado {
+    min-height: 28px;
+    margin-bottom: 18px;
+    color: var(--cor-cinza-escuro);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.busca-resultado strong {
+    color: var(--cor-dourado);
 }
 
 .portal-artigos-header {
@@ -263,6 +279,41 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 24px;
+}
+
+.artigos-vazio {
+    grid-column: 1 / -1;
+    padding: 48px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+}
+
+.artigos-vazio h3 {
+    margin-bottom: 10px;
+    color: var(--cor-primaria-preto);
+    font-size: 22px;
+    line-height: 1.25;
+}
+
+.artigos-vazio p {
+    margin-bottom: 20px;
+    color: var(--cor-cinza-escuro);
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.artigos-vazio button {
+    min-height: 46px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 999px;
+    background: var(--cor-dourado);
+    color: var(--cor-primaria-preto);
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .card-artigo-portal {
@@ -370,6 +421,8 @@
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
     transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    appearance: none;
+    font-family: inherit;
 }
 
 .paginacao-prev span,
@@ -400,10 +453,28 @@
     pointer-events: none;
 }
 
+.paginacao-prev:disabled,
+.paginacao-next:disabled {
+    opacity: 0.48;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 .paginacao-numeros {
     display: flex;
     gap: 10px;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.paginacao-ellipsis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    color: var(--cor-cinza-escuro);
+    font-weight: 700;
 }
 
 .paginacao-nota {

@@ -98,7 +98,12 @@
                 <button id="btn-buscar" class="btn-buscar" type="button">
                   Buscar
                 </button>
-                <button id="btn-limpar" class="btn-limpar" type="button">
+                <button
+                  id="btn-limpar"
+                  class="btn-limpar"
+                  type="button"
+                  hidden
+                >
                   Limpar
                 </button>
               </div>
@@ -108,14 +113,16 @@
 
         <section class="portal-artigos" aria-labelledby="portal-artigos-titulo">
           <div class="portal-artigos-header">
-            <h2 id="portal-artigos-titulo">12 artigos desta página</h2>
+            <h2 id="portal-artigos-titulo">20 artigos disponíveis</h2>
             <p>
               Os cards abaixo já estão estruturados para o filtro em tempo real
               da Parte 3.
             </p>
           </div>
 
-          <div class="artigos-grid">
+          <div class="busca-resultado" id="portal-resultado" aria-live="polite"></div>
+
+          <div class="artigos-grid" id="portal-grid">
             <article
               class="card-artigo-portal"
               data-id="portal-001"
@@ -371,45 +378,17 @@
           </div>
         </section>
 
-        <section
-          class="portal-paginacao"
-          aria-labelledby="portal-paginacao-titulo"
-        >
+        <section class="portal-paginacao" aria-labelledby="portal-paginacao-titulo">
           <div class="paginacao-wrapper">
             <h2 id="portal-paginacao-titulo" class="sr-only">
               Paginação de artigos
             </h2>
-            <nav class="paginacao" aria-label="Navegação de páginas">
-              <a
-                class="paginacao-prev is-disabled"
-                href="./index.html"
-                aria-disabled="true"
-                tabindex="-1"
-              >
-                <span aria-hidden="true">‹</span>
-                Anterior
-              </a>
-
-              <div class="paginacao-numeros" aria-label="Números das páginas">
-                <a
-                  class="paginacao-numero is-active"
-                  href="./index.html"
-                  aria-current="page"
-                  >1</a
-                >
-                <a class="paginacao-numero" href="./index.html?page=2">2</a>
-              </div>
-
-              <a class="paginacao-next" href="./index.html?page=2">
-                Próxima
-                <span aria-hidden="true">›</span>
-              </a>
-            </nav>
+            <div id="portal-pagination"></div>
 
             <p class="paginacao-nota">
-              Conforme o modelo em <code>pag.txt</code>, esta página usa 12
-              artigos por página e deixa a segunda página preparada para os 8
-              itens restantes.
+              Paginação dinâmica em blocos de 12 artigos. Quando o
+              <code>pag.txt</code> entrar na próxima etapa, a mesma lógica será
+              mantida com layout final.
             </p>
           </div>
         </section>
@@ -516,6 +495,7 @@
       </svg>
     </a>
 
+    <script type="module" src="../js/portal.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>
