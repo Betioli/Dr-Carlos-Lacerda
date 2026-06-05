@@ -60,7 +60,7 @@
     left: 0;
     width: 100%;
     height: 50vh;
-    background: url('../image/bg-hero.jpg') center center/cover no-repeat;
+    background: url('../image/bg-hero-desktop.webp') center center/cover no-repeat;
     pointer-events: none;
 }
 

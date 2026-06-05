@@ -1,5 +1,13 @@
 import { obterArtigosHome } from './portal-artigos.js';
 
+const montarImagem = (imagem) => {
+    if (/^https?:\/\//.test(imagem) || imagem.startsWith('/')) {
+        return imagem;
+    }
+
+    return `image%20portal/${imagem}`;
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     const wrapper = document.getElementById('portal-home-wrapper');
 
@@ -13,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <article class="card-artigo" data-id="${artigo.id}">
                     <img
                         class="card-artigo-image"
-                        src="${artigo.imagem}"
+                        src="${montarImagem(artigo.imagem)}"
                         alt="${artigo.titulo}"
                         loading="lazy"
                     />

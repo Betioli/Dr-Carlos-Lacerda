@@ -22,7 +22,7 @@ export const artigos = [
         ],
         link: './artigo-001/',
         imagem:
-            '../image portal/portal-card-1.webp',
+            'portal-card-1.webp',
     },
     {
         id: 'portal-002',
@@ -43,7 +43,7 @@ export const artigos = [
         ],
         link: './artigo-002/',
         imagem:
-            '../image portal/portal-card-2.webp',
+            'portal-card-2.webp',
     },
     {
         id: 'portal-003',
@@ -64,7 +64,7 @@ export const artigos = [
         ],
         link: './artigo-003/',
         imagem:
-            '../image portal/portal-card-3.webp',
+            'portal-card-3.webp',
     },
     {
         id: 'portal-004',
@@ -85,7 +85,7 @@ export const artigos = [
         ],
         link: './artigo-004/',
         imagem:
-            '../image portal/portal-card-4.webp',
+            'portal-card-4.webp',
     },
     {
         id: 'portal-005',
@@ -106,7 +106,7 @@ export const artigos = [
         ],
         link: './artigo-005/',
         imagem:
-            '../image portal/portal-card-5.webp',
+            'portal-card-5.webp',
     },
     {
         id: 'portal-006',
@@ -127,7 +127,7 @@ export const artigos = [
         ],
         link: './artigo-006/',
         imagem:
-            '../image portal/portal-card-6.webp',
+            'portal-card-6.webp',
     },
     {
         id: 'portal-007',
@@ -148,7 +148,7 @@ export const artigos = [
         ],
         link: './artigo-007/',
         imagem:
-            '../image portal/portal-card-7.webp',
+            'portal-card-7.webp',
     },
     {
         id: 'portal-008',
@@ -169,7 +169,7 @@ export const artigos = [
         ],
         link: './artigo-008/',
         imagem:
-            '../image portal/portal-card-8.webp',
+            'portal-card-8.webp',
     },
     {
         id: 'portal-009',
@@ -190,7 +190,7 @@ export const artigos = [
         ],
         link: './artigo-009/',
         imagem:
-            '../image portal/portal-card-9.webp',
+            'portal-card-9.webp',
     },
     {
         id: 'portal-010',
@@ -211,7 +211,7 @@ export const artigos = [
         ],
         link: './artigo-010/',
         imagem:
-            '../image portal/portal-card-10.webp',
+            'portal-card-10.webp',
     },
     {
         id: 'portal-011',
