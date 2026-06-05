@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -32,6 +32,7 @@
                 <li><a href="../../index.html#como-funciona">Como Funciona</a></li>
                 <li><a href="../../index.html#faq">FAQ</a></li>
                 <li><a href="../../index.html#sobre">Sobre Nós</a></li>
+                <li><a href="../../portal/index.html">Portal de Conteúdo</a></li>
                 <li><a href="../../index.html#contato" class="navbar-cta">Contato</a></li>
             </ul>
         </div>
@@ -76,61 +77,25 @@
                 </div>
             </section>
 
-            <section class="conteudo-relacionado" aria-labelledby="conteudo-relacionado">
-                <h2 id="conteudo-relacionado" class="secao-titulo">Conteúdo Relacionado</h2>
-                <div class="carrossel-container" data-carrossel>
-                    <button class="seta-carrossel seta-prev" type="button" aria-label="Ver artigos anteriores">‹</button>
-                    <div class="carrossel-wrapper">
-                        <article class="card-artigo" data-id="imovel-01">
-                            <img class="card-artigo-image" src="../../image/imagem-hero2.jpg" alt="Análise de contratos imobiliários">
-                            <div class="card-artigo-content">
-                                <div class="card-artigo-categoria">Imóvel</div>
-                                <h3 class="card-artigo-titulo">O que revisar antes de assinar um contrato imobiliário</h3>
-                                <a class="card-artigo-link" href="#">Ler mais</a>
-                            </div>
-                        </article>
-                        <article class="card-artigo" data-id="imovel-02">
-                            <img class="card-artigo-image" src="../../image/imagem-sobre-mim.png" alt="Regularização de imóveis">
-                            <div class="card-artigo-content">
-                                <div class="card-artigo-categoria">Regularização</div>
-                                <h3 class="card-artigo-titulo">Regularização de imóveis com pendências documentais</h3>
-                                <a class="card-artigo-link" href="#">Ler mais</a>
-                            </div>
-                        </article>
-                        <article class="card-artigo" data-id="imovel-03">
-                            <img class="card-artigo-image" src="../../image/imagem-hero2.jpg" alt="Posse e propriedade">
-                            <div class="card-artigo-content">
-                                <div class="card-artigo-categoria">Propriedade</div>
-                                <h3 class="card-artigo-titulo">Posse e propriedade: diferenças que impactam o caso</h3>
-                                <a class="card-artigo-link" href="#">Ler mais</a>
-                            </div>
-                        </article>
-                        <article class="card-artigo" data-id="imovel-04">
-                            <img class="card-artigo-image" src="../../image/imagem-sobre-mim.png" alt="Compra e venda de imóveis">
-                            <div class="card-artigo-content">
-                                <div class="card-artigo-categoria">Compra e Venda</div>
-                                <h3 class="card-artigo-titulo">Cuidados jurídicos em compra e venda de imóveis</h3>
-                                <a class="card-artigo-link" href="#">Ler mais</a>
-                            </div>
-                        </article>
-                        <article class="card-artigo" data-id="imovel-05">
-                            <img class="card-artigo-image" src="../../image/imagem-hero2.jpg" alt="Ações possessórias">
-                            <div class="card-artigo-content">
-                                <div class="card-artigo-categoria">Contencioso</div>
-                                <h3 class="card-artigo-titulo">Ações possessórias: quando entram e o que observar</h3>
-                                <a class="card-artigo-link" href="#">Ler mais</a>
-                            </div>
-                        </article>
-                        <article class="card-artigo" data-id="imovel-06">
-                            <img class="card-artigo-image" src="../../image/imagem-sobre-mim.png" alt="Imóvel irregular em inventário">
-                            <div class="card-artigo-content">
-                                <div class="card-artigo-categoria">Patrimônio</div>
-                                <h3 class="card-artigo-titulo">Imóvel irregular em inventário: pontos críticos de revisão</h3>
-                                <a class="card-artigo-link" href="#">Ler mais</a>
-                            </div>
-                        </article>
+            <section class="conteudo-relacionado" aria-labelledby="conteudo-relacionado-titulo">
+                <div class="conteudo-carrossel-wrapper">
+                    <div class="conteudo-relacionado-texto">
+                        <p class="conteudo-relacionado-kicker">Artigos relacionados</p>
+                        <h2 id="conteudo-relacionado-titulo" class="secao-titulo-atuacao">
+                            Direito Imobiliário
+                        </h2>
+                        <p>
+                            Conteúdos sobre compra e venda, contratos, registros, posse, usucapião e
+                            outras situações que exigem cuidado documental e leitura técnica.
+                        </p>
+                        <a href="../../portal/index.html?area=imobiliario" class="btn-ver-todos">Ver todos</a>
                     </div>
-                    <button class="seta-carrossel seta-next" type="button" aria-label="Ver próximos artigos">›</button>
+
+                    <div class="carrossel-container" data-carrossel-area="imobiliario">
+                        <button class="seta-carrossel seta-prev" type="button" aria-label="Ver artigos anteriores">‹</button>
+                        <div class="carrossel-wrapper"></div>
+                        <button class="seta-carrossel seta-next" type="button" aria-label="Ver próximos artigos">›</button>
+                    </div>
                 </div>
             </section>
         </div>
@@ -192,6 +157,10 @@
     </footer>
 
     <script src="../../js/main.js"></script>
+    <script type="module" src="../../js/areas-related.js"></script>
     <script src="../../js/carrossel.js"></script>
 </body>
 </html>
+
+
+

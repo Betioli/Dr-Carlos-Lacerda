@@ -3,7 +3,7 @@
 // ===================================
 
 function inicializarCarrossel() {
-    document.querySelectorAll('[data-carrossel]').forEach((carrossel) => {
+    document.querySelectorAll('[data-carrossel], [data-carrossel-area]').forEach((carrossel) => {
         const wrapper = carrossel.querySelector('.carrossel-wrapper');
         const prev = carrossel.querySelector('.seta-prev');
         const next = carrossel.querySelector('.seta-next');

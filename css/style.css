@@ -1,5 +1,5 @@
 ﻿/* ===================================
-           RESET E VARIÁVEIS
+           RESET E VARI�VEIS
         =================================== */
 * {
     margin: 0;
@@ -26,7 +26,7 @@ body {
 }
 
 /* ===================================
-           UTILITÁRIOS
+           UTILIT�RIOS
         =================================== */
 .container {
     max-width: 1400px;
@@ -229,8 +229,8 @@ body {
 }
 
 /* ===================================
-           SEÇÃO - ÁREAS DE ATUAÇÃO
-           TÍTULOS MENORES PARA MOBILE
+           SE��O - �REAS DE ATUA��O
+           T�TULOS MENORES PARA MOBILE
         =================================== */
 .secao-areas {
     padding: var(--espacamento-secao) 0;
@@ -274,7 +274,7 @@ body {
 }
 
 /* ===================================
-           ÁREAS DE ATUAÇÃO - CARDS
+           �REAS DE ATUA��O - CARDS
         =================================== */
 .areas-grid {
     display: grid;
@@ -324,8 +324,8 @@ body {
 }
 
 /* ===================================
-           SEÇÃO - COMO RESOLVE (COM BANNER)
-           TÍTULOS MENORES PARA MOBILE
+           SE��O - COMO RESOLVE (COM BANNER)
+           T�TULOS MENORES PARA MOBILE
         =================================== */
 .secao-resolve {
     padding: var(--espacamento-secao) 0;
@@ -398,7 +398,7 @@ body {
 }
 
 .resolve-item::before {
-    content: '⚖';
+    content: '?';
     position: absolute;
     left: 25px;
     top: 50%;
@@ -408,7 +408,7 @@ body {
 }
 
 /* ===================================
-           SEÇÃO - SOBRE O ADVOGADO
+           SE��O - SOBRE O ADVOGADO
            AJUSTES IMAGEM PARA MOBILE
         =================================== */
 .secao-sobre {
@@ -470,7 +470,7 @@ body {
 }
 
 /* ===================================
-           SEÇÃO - ONDE ESTAMOS
+           SE��O - ONDE ESTAMOS
         =================================== */
 .secao-onde-estamos {
     padding: 0;
@@ -721,7 +721,7 @@ body {
 }
 
 /* ===================================
-           SEÇÃO - PORTAL
+           SE��O - PORTAL
         =================================== */
 .secao-portal {
     padding: var(--espacamento-secao) 0;
@@ -782,7 +782,7 @@ body {
 .portal-carrossel-wrapper .card-artigo {
     flex: 0 0 280px;
     background: var(--cor-secundaria-branco);
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
@@ -838,7 +838,7 @@ body {
 }
 
 .portal-carrossel-wrapper .card-artigo-link::after {
-    content: '→';
+    content: '?';
 }
 
 .portal-carrossel-wrapper .seta-carrossel {
@@ -889,7 +889,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 12px 28px;
-    border-radius: 999px;
+    border-radius: 10px;
     background: var(--cor-dourado);
     color: var(--cor-primaria-preto);
     font-size: 15px;
@@ -904,7 +904,7 @@ body {
 }
 
 /* ===================================
-           SEÇÃO - CTA FINAL
+           SE��O - CTA FINAL
         =================================== */
 .secao-cta {
     padding: var(--espacamento-secao) 0;
@@ -947,7 +947,7 @@ body {
 }
 
 /* ===================================
-           BOTÃO FLUTUANTE WHATSAPP
+           BOT�O FLUTUANTE WHATSAPP
         =================================== */
 .whatsapp-float {
     position: fixed;
@@ -1466,7 +1466,7 @@ footer {
 }
 
 /* ===================================
-           ANIMAÇÕES
+           ANIMA��ES
         =================================== */
 @keyframes fadeInUp {
     from {

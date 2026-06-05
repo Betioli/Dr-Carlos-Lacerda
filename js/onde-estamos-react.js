@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'https://esm.sh/react@18.3.1';
+﻿import React, { useEffect, useRef } from 'https://esm.sh/react@18.3.1';
 import { createRoot } from 'https://esm.sh/react-dom@18.3.1/client';
 import createGlobe from 'https://esm.sh/cobe';
 
@@ -119,3 +119,4 @@ const mountNode = document.getElementById('onde-estamos-react');
 if (mountNode) {
     createRoot(mountNode).render(h(OndeEstamosSection));
 }
+

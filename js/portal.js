@@ -1,4 +1,4 @@
-import artigos from './portal-artigos.js';
+﻿import artigos from './portal-artigos.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('portal-grid');
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const palavraParam = params.get('q');
     const pageParam = Number(params.get('page'));
 
-    if (areaParam && ['familia', 'imobiliario', 'consultoria'].includes(areaParam)) {
+    if (areaParam && ['familia', 'imobiliario'].includes(areaParam)) {
         selectArea.value = areaParam;
     }
 
@@ -261,4 +261,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     renderizar();
+
+    if (areaParam || palavraParam || (Number.isInteger(pageParam) && pageParam > 0)) {
+        requestAnimationFrame(() => {
+            grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    }
 });
+
