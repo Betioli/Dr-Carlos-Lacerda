@@ -22,7 +22,7 @@ export const artigos = [
         ],
         link: './artigo-001/',
         imagem:
-            'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80',
+            '../image portal/portal-card-1.webp',
     },
     {
         id: 'portal-002',
@@ -43,7 +43,7 @@ export const artigos = [
         ],
         link: './artigo-002/',
         imagem:
-            'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80',
+            '../image portal/portal-card-2.webp',
     },
     {
         id: 'portal-003',
@@ -64,7 +64,7 @@ export const artigos = [
         ],
         link: './artigo-003/',
         imagem:
-            'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80',
+            '../image portal/portal-card-3.webp',
     },
     {
         id: 'portal-004',
@@ -85,7 +85,7 @@ export const artigos = [
         ],
         link: './artigo-004/',
         imagem:
-            'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80',
+            '../image portal/portal-card-4.webp',
     },
     {
         id: 'portal-005',
@@ -106,7 +106,7 @@ export const artigos = [
         ],
         link: './artigo-005/',
         imagem:
-            'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80',
+            '../image portal/portal-card-5.webp',
     },
     {
         id: 'portal-006',
@@ -127,7 +127,7 @@ export const artigos = [
         ],
         link: './artigo-006/',
         imagem:
-            'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+            '../image portal/portal-card-6.webp',
     },
     {
         id: 'portal-007',
@@ -148,7 +148,7 @@ export const artigos = [
         ],
         link: './artigo-007/',
         imagem:
-            'https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=800&q=80',
+            '../image portal/portal-card-7.webp',
     },
     {
         id: 'portal-008',
@@ -169,7 +169,7 @@ export const artigos = [
         ],
         link: './artigo-008/',
         imagem:
-            'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80',
+            '../image portal/portal-card-8.webp',
     },
     {
         id: 'portal-009',
@@ -190,7 +190,7 @@ export const artigos = [
         ],
         link: './artigo-009/',
         imagem:
-            'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80',
+            '../image portal/portal-card-9.webp',
     },
     {
         id: 'portal-010',
@@ -211,7 +211,7 @@ export const artigos = [
         ],
         link: './artigo-010/',
         imagem:
-            'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80',
+            '../image portal/portal-card-10.webp',
     },
     {
         id: 'portal-011',
@@ -347,4 +347,3 @@ export const obterArtigosPorArea = (area) =>
     artigos.filter((artigo) => artigo.area === area);
 
 export default artigos;
-
