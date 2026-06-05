@@ -1,4 +1,4 @@
-﻿/* ===================================
+/* ===================================
            RESET E VARI�VEIS
         =================================== */
 * {
@@ -160,7 +160,7 @@ body {
         =================================== */
 .hero {
     height: 110vh;
-    background: url('../image/bg-hero.jpg') center/cover no-repeat;
+    background: url('../image/bg-hero-desktop.webp') center/cover no-repeat;
     display: flex;
     align-items: center;
     position: relative;
@@ -579,7 +579,7 @@ body {
 
 .secao-faq {
     padding: var(--espacamento-secao) 0;
-    background: url('../image/BG-FAQ.jpg') center/cover;
+    background: url('../image/bg-faq-desktop.webp') center/cover;
 }
 
 .faq-container {
@@ -908,7 +908,7 @@ body {
         =================================== */
 .secao-cta {
     padding: var(--espacamento-secao) 0;
-    background: url('../image/photorealistic-lawyer.jpg') center/cover;
+    background: url('../image/bg-cta-desktop.webp') center/cover;
     text-align: center;
     position: relative;
 }

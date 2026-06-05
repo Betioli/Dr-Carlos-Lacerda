@@ -1,4 +1,4 @@
-﻿import artigos from './portal-artigos.js';
+import artigos from './portal-artigos.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('portal-grid');
@@ -268,4 +268,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
