@@ -1,0 +1,52 @@
+
+Por Dra. Lucy Estanqueiro e Dra. Raissa Venturin, advogadas da NWADV.
+
+A rápida evolução da Inteligência Artificial generativa vem provocando profundas transformações nas estruturas clássicas da Propriedade Intelectual, especialmente porque os institutos jurídicos tradicionalmente concebidos para proteger criações humanas passaram a enfrentar situações inéditas, nas quais sistemas automatizados são capazes de produzir textos, imagens, músicas, marcas, códigos e soluções técnicas sem intervenção humana direta ou com participação humana reduzida. Esse novo cenário desafia os limites conceituais da autoria, da titularidade e da originalidade, exigindo do Direito uma releitura de seus fundamentos à luz das novas dinâmicas tecnológicas.
+
+A Constituição Federal de 1988 assegura ampla proteção à propriedade intelectual como desdobramento dos direitos fundamentais relacionados à criatividade, ao desenvolvimento econômico e à valorização do trabalho intelectual. O artigo 5º, inciso XXVII, estabelece que “aos autores pertence o direito exclusivo de utilização, publicação ou reprodução de suas obras […]”, enquanto o inciso XXIX prevê
+proteção às criações industriais, às marcas, aos nomes empresariais e a outros signos distintivos, tendo em vista o interesse social e o desenvolvimento tecnológico e econômico do país. A proteção constitucional, portanto, parte de uma premissa central: a existência de uma criação decorrente da atividade intelectual humana.
+
+É justamente essa premissa que passa a ser tensionada pela Inteligência Artificial. Os sistemas generativos contemporâneos não apenas auxiliam processos criativos, mas muitas vezes produzem resultados autônomos, sofisticados e economicamente relevantes. Surge, então, a indagação central: os modelos jurídicos atuais são suficientes para lidar com a Inteligência Artificial? A resposta,
+embora ainda em construção, aponta para uma insuficiência parcial do sistema tradicional, especialmente porque os regimes normativos vigentes foram estruturados sobre a ideia de centralidade humana na criação intelectual.
+
+Nesse contexto, torna-se indispensável compreender os conceitos de autoria, titularidade e originalidade. A autoria corresponde à relação jurídica entre o criador intelectual e a obra produzida. No Direito brasileiro, especialmente à luz da Lei de Direitos Autorais (Lei nº 9.610/98), o autor é necessariamente pessoa natural, conforme dispõe o artigo 11: “Autor é a pessoa física criadora de obra literária,
+artística ou científica.” Trata-se de requisito que vincula a proteção autoral à atividade criativa humana, afastando, ao menos sob a legislação vigente, a possibilidade de reconhecimento de autoria a sistemas de Inteligência Artificial.
+
+A titularidade, por sua vez, refere-se à detenção dos direitos patrimoniais decorrentes da criação intelectual. Embora a autoria seja personalíssima e ligada ao criador humano, a titularidade pode ser transferida a terceiros por cessão,
+sucessão, contrato de trabalho ou outros mecanismos previstos em lei. Assim, ainda que uma obra seja criada com auxílio de IA, os direitos patrimoniais eventualmente reconhecidos recaem, em regra, sobre o indivíduo ou empresa responsável pela programação, operação ou direcionamento da ferramenta tecnológica. O problema jurídico emerge justamente quando a intervenção humana se torna mínima ou meramente instrumental, dificultando a identificação de um efetivo elemento criativo humano apto a justificar a proteção autoral
+clássica.
+
+Já a originalidade constitui um dos principais requisitos para proteção jurídica das criações intelectuais. Original não significa necessariamente inédita ou absolutamente nova, mas sim dotada de individualidade criativa suficiente para refletir uma manifestação intelectual própria do autor. O desafio trazido pela IA reside no fato de que muitos sistemas generativos operam a partir do
+processamento massivo de dados e obras preexistentes, reproduzindo padrões, estilos e estruturas que podem esvaziar a noção clássica de criação individualizada.
+
+A problemática torna-se ainda mais sensível quando se analisam os impactos da Inteligência Artificial sobre atributos personalíssimos relacionados à voz,  imagem e identidade. Em meio ao avanço de tecnologias capazes de replicar com extrema fidelidade características humanas, artistas e titulares de direitos passaram a adotar medidas preventivas de proteção jurídica. Exemplo
+emblemático ocorreu recentemente com Taylor Swift, que registrou marcas relacionadas à sua voz e imagem em meio às crescentes preocupações envolvendo o uso de Inteligência Artificial para reprodução indevida de sua identidade artística.
+Segundo reportagem publicada pelo portal G1, a iniciativa decorre justamente do aumento de conteúdos gerados artificialmente capazes de imitar traços vocais e visuais da artista com alto grau de precisão.
+
+O caso evidencia que a discussão envolvendo IA e Propriedade Intelectual ultrapassa os limites tradicionais do direito autoral, alcançando também os direitos da personalidade, previstos nos artigos 11 a 21 do Código Civil. A proteção da imagem, da voz, da honra e da identidade pessoal assume papel central diante da possibilidade de manipulação tecnológica desses atributos. O artigo 20 do Código Civil dispõe que a utilização da imagem de uma pessoa poderá ser proibida quando atingir sua honra, boa fama ou respeitabilidade, ou quando se destinar a fins comerciais sem autorização. Embora elaborado em contexto anterior à explosão da IA generativa, o dispositivo vem sendo interpretado de forma ampliativa para abranger reproduções artificiais realizadas por sistemas automatizados.
+
+Além disso, a própria dignidade da pessoa humana, fundamento da República previsto no artigo 1º, inciso III, da Constituição Federal, passa a servir como vetor interpretativo indispensável na proteção contra usos abusivos da Inteligência Artificial. Isso porque a replicação indevida de voz, imagem e identidade não representa apenas violação patrimonial, mas também potencial afronta à autonomia individual e aos direitos existenciais.
+
+No âmbito da propriedade industrial, igualmente surgem questionamentos relevantes acerca da possibilidade de reconhecimento de invenções produzidas autonomamente por IA. O sistema patentário brasileiro, regido pela Lei nº 9.279/96, pressupõe atividade inventiva humana, o que gera controvérsias internacionais sobre pedidos de patente envolvendo Inteligências Artificiais apontadas como inventoras. Diversos países já enfrentaram discussões envolvendo o sistema DABUS, IA indicada como inventora em pedidos patentários internacionais. A tendência predominante, até o momento, tem sido rejeitar o reconhecimento de máquinas como inventoras, justamente pela ausência de personalidade jurídica e capacidade legal.
+
+Entretanto, a crescente sofisticação tecnológica vem pressionando os sistemas jurídicos a revisarem conceitos historicamente consolidados. No Brasil, as propostas de reforma do Código Civil atualmente em debate já demonstram preocupação com os impactos da transformação digital e da Inteligência Artificial.
+
+Entre os pontos discutidos pela comissão de juristas responsável pela atualização do Código Civil, destacam-se propostas relacionadas à proteção de dados, personalidade digital, responsabilidade civil algorítmica e tutela de direitos decorrentes do uso de tecnologias autônomas.
+
+As discussões legislativas caminham no sentido de reconhecer que o modelo civil clássico, estruturado sobre relações essencialmente humanas, pode não ser suficiente para responder adequadamente aos novos conflitos tecnológicos. A possibilidade de responsabilização por danos causados por IA, a tutela da identidade digital e os limites da exploração econômica de conteúdos gerados artificialmente são temas que já integram os debates contemporâneos sobre atualização legislativa.
+
+Nesse panorama, percebe-se que a Inteligência Artificial não elimina a importância da Propriedade Intelectual, mas redefine seus contornos. O sistema jurídico passa a enfrentar o desafio de equilibrar incentivo à inovação tecnológica com proteção à criatividade humana, preservando os direitos fundamentais envolvidos e evitando tanto o esvaziamento da autoria quanto a ausência de tutela frente às novas formas de exploração econômica e violação de direitos.
+
+Portanto, embora os modelos jurídicos atuais ofereçam instrumentos relevantes para enfrentamento parcial das questões envolvendo Inteligência Artificial, tornase evidente a necessidade de evolução normativa e interpretativa. A centralidade
+humana que historicamente fundamentou os regimes de autoria, titularidade e originalidade permanece essencial, mas precisa ser reinterpretada diante de tecnologias capazes de reproduzir, criar e explorar ativos intelectuais em escala
+inédita. O futuro da Propriedade Intelectual dependerá justamente da capacidade do Direito de adaptar seus institutos clássicos sem perder de vista a proteção da dignidade humana, da criatividade e da segurança jurídica em um ambiente cada
+vez mais automatizado.
+
+Fontes:
+Senado Federal – Reforma do Código Civil e responsabilidade da IA1
+Ministério da Justiça – Direito Digital e IA na atualização do Código Civil2
+Constituição da República Federativa do Brasil de 1988.
+Lei nº 9.610/1998 (Lei de Direitos Autorais).
+Lei nº 9.279/1996 (Lei da Propriedade Industrial).
+Lei nº 10.406/2002 (Código Civil).
+Reportagem do G1 sobre Taylor Swift e IA3
