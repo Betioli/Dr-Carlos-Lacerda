@@ -23,7 +23,7 @@
       rel="stylesheet"
     />
 
-    <link rel="icon" type="image/png" href="image/imagem-hero2.jpg" />
+    <!-- <link rel="icon" type="image/png" href="image/imagem-hero2.jpg" /> -->
   </head>
   <body>
     <nav class="navbar">
@@ -53,6 +53,20 @@
 
     <!-- HERO SECTION -->
     <section class="hero" id="home">
+      <picture>
+        <source media="(max-width: 576px)" srcset="image/bg-hero-mobile.webp" />
+        <source media="(max-width: 992px)" srcset="image/bg-hero-tablet.webp" />
+        <source
+          media="(min-width: 993px)"
+          srcset="image/bg-hero-desktop.webp"
+        />
+        <img
+          src="image/bg-hero-desktop.webp"
+          alt=""
+          aria-hidden="true"
+          class="hero-background"
+        />
+      </picture>
       <div class="container">
         <div class="hero-content">
           <div class="hero-text fade-in">

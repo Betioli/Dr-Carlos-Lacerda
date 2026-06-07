@@ -156,22 +156,36 @@ body {
 }
 
 /* ===================================
-           HERO SECTION - AJUSTES MOBILE
+           HERO SECTION
         =================================== */
 .hero {
-    height: 110vh;
-    background: url('../image/bg-hero-desktop.webp') center/cover no-repeat;
+    position: relative;
+    min-height: 110vh;
     display: flex;
     align-items: center;
-    position: relative;
     overflow: hidden;
     padding: 0;
     margin-top: 0;
+    isolation: isolate;
 }
 
-.hero .container {
+.hero picture {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+}
+
+.hero picture,
+.hero-background {
     width: 100%;
-    max-width: none;
+    height: 100%;
+}
+
+.hero-background {
+    display: block;
+    object-fit: cover;
+    object-position: center;
 }
 
 .hero::before {
@@ -185,6 +199,15 @@ body {
 
             rgba(0, 0, 0, 0.72) 100%);
     opacity: 1;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero .container {
+    width: 100%;
+    max-width: none;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content {
@@ -195,7 +218,6 @@ body {
     max-width: 600px;
     justify-content: space-between;
     position: relative;
-    z-index: 2;
 }
 
 .hero-text h1 {
@@ -1153,7 +1175,7 @@ footer {
     }
 
     .hero {
-        height: 100vh;
+        min-height: 100vh;
     }
 
     .hero-text h1 {
@@ -1283,7 +1305,7 @@ footer {
 
     /* Ajustes para celulares */
     .hero {
-        height: 100vh;
+        min-height: 100vh;
     }
 
     .hero-text h1 {
