@@ -232,7 +232,7 @@ export const artigos = [
         ],
         link: './artigo-011/',
         imagem:
-            'https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=800&q=80',
+            './portal-card-11.webp',
     },
     {
         id: 'portal-012',
@@ -253,7 +253,7 @@ export const artigos = [
         ],
         link: './artigo-012/',
         imagem:
-            'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80',
+            './portal-card-12.webp',
     },
     {
         id: 'portal-013',
@@ -274,7 +274,7 @@ export const artigos = [
         ],
         link: './artigo-013/',
         imagem:
-            'https://images.unsplash.com/photo-1507537666052-a1e3e512e35d?auto=format&fit=crop&w=800&q=80',
+            './portal-card-13.webp',
     },
     {
         id: 'portal-014',
@@ -295,10 +295,10 @@ export const artigos = [
         ],
         link: './artigo-014/',
         imagem:
-            'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=80',
+            './portal-card-14.webp',
     },
     {
-        id: 'portal-016',
+        id: 'portal-015',
         area: 'imobiliario',
         titulo: 'Usucapião: como adquirir propriedade pelo tempo',
         categoria: 'Usucapião',
@@ -314,12 +314,12 @@ export const artigos = [
             'ordinária',
             'extraordinária',
         ],
-        link: './artigo-016/',
+        link: './artigo-015/',
         imagem:
-            'https://images.unsplash.com/photo-1500323343323-5c5c8b1b6c03?auto=format&fit=crop&w=800&q=80',
+            './portal-card-15.webp',
     },
     {
-        id: 'portal-018',
+        id: 'portal-016',
         area: 'imobiliario',
         titulo: 'Condomínio: entenda seus direitos e deveres',
         categoria: 'Condomínio',
@@ -335,9 +335,9 @@ export const artigos = [
             'regras',
             'comum',
         ],
-        link: './artigo-018/',
+        link: './artigo-016/',
         imagem:
-            'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80',
+            './portal-card-16.webp',
     },
 ];
 
