@@ -43,7 +43,7 @@ function atualizarBadgeTempoLeitura() {
     }
 
     const minutos = calcularTempoLeitura();
-    badge.textContent = `📖 ${minutos} min de leitura`;
+    badge.textContent = `\u{1F4D6} ${minutos} min de leitura`;
 }
 
 /**

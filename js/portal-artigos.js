@@ -104,7 +104,7 @@ export const artigos = [
             'planejamento',
             'documentos',
         ],
-        link: './artigo-005/',
+        link: './artigos/artigo-005/',
         imagem:
             'portal-card-5.webp',
     },
