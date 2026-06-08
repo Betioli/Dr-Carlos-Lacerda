@@ -1,111 +1,92 @@
 /* ===================================
-   ÁREAS DE ATUAÇÃO – CSS específico
-   (Carregar após base.css)
+   PÁGINAS DE ÁREAS - ESTILOS ESPECÍFICOS
 =================================== */
 
-/* ----- BANNER COM IMAGEM DE FUNDO (HERO) ----- */
-.area-hero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50vh;
-    z-index: 0;
-}
-
-.area-hero picture,
-.area-hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.area-hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
-    z-index: 1;
-    pointer-events: none;
-}
-
-/* ----- CONTAINER PRINCIPAL ----- */
-.area-page-container {
-    position: relative;
-    min-height: 100vh;
+.pagina-area {
     background: var(--cor-secundaria-branco);
-    overflow: hidden;
 }
 
-.area-page-container>.container {
-    position: relative;
-    z-index: 2;
-    padding-top: 50vh;
-    /* empurra o conteúdo para baixo da imagem */
+.pagina-area .navbar {
+    background: var(--cor-primaria-preto);
+    color: var(--cor-secundaria-branco);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: none;
 }
 
-/* ----- BREADCRUMB ----- */
+.pagina-area .navbar-brand {
+    text-decoration: none;
+}
+
+.pagina-area .navbar-brand h2 {
+    color: var(--cor-dourado);
+}
+
+.pagina-area .navbar-menu {
+    align-items: center;
+}
+
+.pagina-area .navbar-menu a {
+    color: var(--cor-secundaria-branco);
+}
+
+.pagina-area .navbar-menu a:hover,
+.pagina-area .navbar-menu a.active {
+    color: var(--cor-dourado);
+}
+
+.pagina-area .navbar-menu .navbar-cta {
+    color: var(--cor-primaria-preto);
+}
+
+/* Breadcrumb */
 .breadcrumb {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--cor-cinza-escuro);
     margin-bottom: 30px;
     padding: 20px 0;
     display: flex;
     gap: 10px;
     align-items: center;
     flex-wrap: wrap;
-    position: relative;
-    z-index: 2;
 }
 
 .breadcrumb a {
     color: var(--cor-dourado);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .breadcrumb a:hover {
     text-decoration: underline;
 }
 
-.breadcrumb span {
-    color: rgba(255, 255, 255, 0.6);
+/* Página Container */
+.area-page-container {
+    background: var(--cor-secundaria-branco);
+    padding: 0;
+    min-height: 100vh;
 }
 
-/* ----- CABEÇALHO SOBRE O BANNER ----- */
 .area-page-header {
-    position: relative;
-    z-index: 2;
-    color: var(--cor-secundaria-branco);
-    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.24);
-    margin-top: -18vh;
-    padding-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .area-page-header h1 {
-    font-size: clamp(28px, 4vw, 42px);
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 1.15;
+    font-size: 35px;
+    font-weight: 500;
+    color: var(--cor-primaria-preto);
+    margin-bottom: 24px;
+    line-height: 1.2;
 }
 
 .area-page-header p {
     max-width: 860px;
-    font-size: 18px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    color: var(--cor-cinza-escuro);
+    line-height: 1.8;
 }
 
-/* ----- GRID DE SERVIÇOS ----- */
-.secao-titulofs {
-    font-size: 20px;
-    font-weight: 500;
-    text-align: left;
-    margin-bottom: 10px;
-    color: var(--cor-primaria-preto);
-    line-height: 1.1;
-}
-
+/* Serviços Grid */
 .servicos-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -119,6 +100,15 @@
     border-radius: 18px;
     padding: 36px 34px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.secao-titulofs {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 10px;
+    color: var(--cor-primaria-preto);
+    line-height: 1.1;
 }
 
 .servicos-coluna h3 {
@@ -136,12 +126,13 @@
 .servicos-coluna li {
     font-size: 15px;
     color: var(--cor-cinza-escuro);
-    padding: 12px 0 12px 25px;
+    padding: 12px 0;
+    padding-left: 25px;
     position: relative;
     line-height: 1.8;
 }
 
-.servicos-coluna li::before {
+.servicos-coluna li:before {
     content: '•';
     position: absolute;
     left: 0;
@@ -150,9 +141,9 @@
     font-size: 20px;
 }
 
-/* ----- ARTIGOS RELACIONADOS (CARROSSEL) ----- */
+/* Carrossel de Artigos */
 .conteudo-relacionado {
-    margin-top: 120px;
+    margin-top: 140px;
     margin-bottom: 40px;
 }
 
@@ -181,7 +172,7 @@
     width: fit-content;
     padding: 6px 12px;
     border-radius: 999px;
-    background: rgba(212, 175, 55, 0.12);
+    background: rgba(212, 175, 55, 0.54);
     color: var(--cor-dourado);
     font-size: 12px;
     font-weight: 800;
@@ -191,7 +182,7 @@
 
 .secao-titulo-atuacao {
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--cor-primaria-preto);
     line-height: 1.1;
     text-align: left;
@@ -203,21 +194,21 @@
     line-height: 1.8;
 }
 
-.btn-ver-todos {
-    /* herdado do base.css */
+.conteudo-relacionado-texto .btn-ver-todos {
+    width: fit-content;
 }
 
-/* Cards e setas (idêntico ao artigo) */
 .conteudo-carrossel-wrapper .carrossel-container {
     position: relative;
+    margin: 0;
 }
 
 .conteudo-carrossel-wrapper .carrossel-wrapper {
     display: flex;
     gap: 20px;
     overflow-x: auto;
-    padding: 20px 0;
     scroll-behavior: smooth;
+    padding: 20px 0;
     scrollbar-width: none;
 }
 
@@ -231,7 +222,7 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 
@@ -243,9 +234,9 @@
 .conteudo-carrossel-wrapper .card-artigo-image {
     width: 100%;
     height: 180px;
+    background: var(--cor-cinza-escuro);
     object-fit: cover;
     display: block;
-    background: var(--cor-cinza-escuro);
 }
 
 .conteudo-carrossel-wrapper .card-artigo-content {
@@ -279,15 +270,14 @@
     transition: gap 0.3s ease;
 }
 
-.conteudo-carrossel-wrapper .card-artigo-link::after {
-    content: '→';
-}
-
 .conteudo-carrossel-wrapper .card-artigo-link:hover {
     gap: 12px;
 }
 
-/* Setas do carrossel */
+.conteudo-carrossel-wrapper .card-artigo-link::after {
+    content: '→';
+}
+
 .conteudo-carrossel-wrapper .seta-carrossel {
     position: absolute;
     top: 50%;
@@ -326,7 +316,6 @@
     right: -24px;
 }
 
-/* ----- RESPONSIVO ----- */
 @media (max-width: 992px) {
     .servicos-grid {
         grid-template-columns: 1fr;
@@ -346,39 +335,17 @@
     }
 }
 
-@media (max-width: 768px) {
-    .area-page-container>.container {
-        padding-top: 45vh;
-    }
-
-    .area-page-header {
-        margin-top: -14vh;
-    }
-}
-
 @media (max-width: 576px) {
-    .area-hero {
-        height: 45vh;
-    }
-
-    .area-page-container>.container {
-        padding-top: 40vh;
-    }
-
-    .area-page-header {
-        margin-top: -10vh;
-    }
-
     .area-page-header h1 {
         font-size: 30px;
     }
 
-    .secao-titulo-atuacao {
-        font-size: 24px;
+    .conteudo-relacionado {
+        margin-top: 110px;
     }
 
-    .conteudo-relacionado {
-        margin-top: 100px;
+    .secao-titulo-atuacao {
+        font-size: 24px;
     }
 
     .conteudo-carrossel-wrapper .card-artigo {

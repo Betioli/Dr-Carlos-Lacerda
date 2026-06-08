@@ -232,7 +232,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-011/',
         imagem:
-            './/image-portal/portal-card-11.webp',
+            '/image-portal/portal-card-11.webp',
     },
     {
         id: 'portal-012',
@@ -253,7 +253,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-012/',
         imagem:
-            './/image-portal/portal-card-12.webp',
+            '/image-portal/portal-card-12.webp',
     },
     {
         id: 'portal-013',
@@ -274,7 +274,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-013/',
         imagem:
-            './/image-portal/portal-card-13.webp',
+            '/image-portal/portal-card-13.webp',
     },
     {
         id: 'portal-014',
@@ -295,7 +295,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-014/',
         imagem:
-            './/image-portal/portal-card-14.webp',
+            '/image-portal/portal-card-14.webp',
     },
     {
         id: 'portal-015',
@@ -316,7 +316,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-015/',
         imagem:
-            './/image-portal/portal-card-15.webp',
+            '/image-portal/portal-card-15.webp',
     },
     {
         id: 'portal-016',
@@ -337,7 +337,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-016/',
         imagem:
-            '/image-portal//image-portal/portal-card-16.webp',
+            '/image-portal/portal-card-16.webp',
     },
 ];
 
