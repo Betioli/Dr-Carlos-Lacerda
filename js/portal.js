@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="card-artigo-content">
                 <div class="card-artigo-categoria">${artigo.categoria}</div>
                 <h3 class="card-artigo-titulo">${artigo.titulo}</h3>
-                <a class="card-artigo-link" href="${artigo.link}">Ler mais</a>
+                <a class="card-artigo-link" href="./artigos/${artigo.link.replace('./', '')}">Ler mais</a>
             </div>
         </article>
     `;
@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <div class="paginacao-numeros" aria-label="Números das páginas">
                     ${paginasVisiveis
-                        .map(
-                            (pagina) => `
+                .map(
+                    (pagina) => `
                                 <button
                                     class="paginacao-numero${pagina === paginaSelecionada ? ' is-active' : ''}"
                                     type="button"
@@ -142,8 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                     ${pagina}
                                 </button>
                             `
-                        )
-                        .join('')}
+                )
+                .join('')}
                 </div>
 
                 <button

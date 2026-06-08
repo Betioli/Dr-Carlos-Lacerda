@@ -20,7 +20,7 @@ export const artigos = [
             'partilha',
             'herdeiros',
         ],
-        link: './artigo-001/',
+        link: './artigos/artigo-001/',
         imagem:
             'portal-card-1.webp',
     },
@@ -41,7 +41,7 @@ export const artigos = [
             'quinhão',
             'família',
         ],
-        link: './artigo-002/',
+        link: './artigos/artigo-002/',
         imagem:
             'portal-card-2.webp',
     },
@@ -62,7 +62,7 @@ export const artigos = [
             'patrimonial',
             'documentos',
         ],
-        link: './artigo-003/',
+        link: './artigos/artigo-003/',
         imagem:
             'portal-card-3.webp',
     },
@@ -83,7 +83,7 @@ export const artigos = [
             'cartório',
             'propriedade',
         ],
-        link: './artigo-004/',
+        link: './artigos/artigo-004/',
         imagem:
             'portal-card-4.webp',
     },
@@ -125,7 +125,7 @@ export const artigos = [
             'irregular',
             'registro',
         ],
-        link: './artigo-006/',
+        link: './artigos/artigo-006/',
         imagem:
             'portal-card-6.webp',
     },
@@ -146,7 +146,7 @@ export const artigos = [
             'família',
             'diálogo',
         ],
-        link: './artigo-007/',
+        link: './artigos/artigo-007/',
         imagem:
             'portal-card-7.webp',
     },
@@ -167,7 +167,7 @@ export const artigos = [
             'titularidade',
             'segurança',
         ],
-        link: './artigo-008/',
+        link: './artigos/artigo-008/',
         imagem:
             'portal-card-8.webp',
     },
@@ -188,7 +188,7 @@ export const artigos = [
             'estratégia',
             'orientação',
         ],
-        link: './artigo-009/',
+        link: './artigos/artigo-009/',
         imagem:
             'portal-card-9.webp',
     },
@@ -209,7 +209,7 @@ export const artigos = [
             'assinatura',
             'revisão',
         ],
-        link: './artigo-010/',
+        link: './artigos/artigo-010/',
         imagem:
             'portal-card-10.webp',
     },
@@ -230,7 +230,7 @@ export const artigos = [
             'estratégia',
             'família',
         ],
-        link: './artigo-011/',
+        link: './artigos/artigo-011/',
         imagem:
             './portal-card-11.webp',
     },
@@ -251,7 +251,7 @@ export const artigos = [
             'histórico',
             'análise',
         ],
-        link: './artigo-012/',
+        link: './artigos/artigo-012/',
         imagem:
             './portal-card-12.webp',
     },
@@ -272,7 +272,7 @@ export const artigos = [
             'sobrevivente',
             'sucessão',
         ],
-        link: './artigo-013/',
+        link: './artigos/artigo-013/',
         imagem:
             './portal-card-13.webp',
     },
@@ -293,7 +293,7 @@ export const artigos = [
             'financiamento',
             'matrícula',
         ],
-        link: './artigo-014/',
+        link: './artigos/artigo-014/',
         imagem:
             './portal-card-14.webp',
     },
@@ -314,7 +314,7 @@ export const artigos = [
             'ordinária',
             'extraordinária',
         ],
-        link: './artigo-015/',
+        link: './artigos/artigo-015/',
         imagem:
             './portal-card-15.webp',
     },
@@ -335,7 +335,7 @@ export const artigos = [
             'regras',
             'comum',
         ],
-        link: './artigo-016/',
+        link: './artigos/artigo-016/',
         imagem:
             './portal-card-16.webp',
     },
