@@ -5,7 +5,7 @@ const montarImagem = (imagem) => {
         return imagem;
     }
 
-    return `../image%20portal/${imagem}`;
+    return `/image-portal/${imagem}`;
 };
 
 document.addEventListener('DOMContentLoaded', () => {

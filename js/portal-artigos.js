@@ -20,9 +20,9 @@ export const artigos = [
             'partilha',
             'herdeiros',
         ],
-        link: './artigos/artigo-001/',
+        link: '/portal/artigos/artigo-001/',
         imagem:
-            'portal-card-1.webp',
+            '/image-portal/portal-card-1.webp',
     },
     {
         id: 'portal-002',
@@ -41,9 +41,9 @@ export const artigos = [
             'quinhão',
             'família',
         ],
-        link: './artigos/artigo-002/',
+        link: '/portal/artigos/artigo-002/',
         imagem:
-            'portal-card-2.webp',
+            '/image-portal/portal-card-2.webp',
     },
     {
         id: 'portal-003',
@@ -62,9 +62,9 @@ export const artigos = [
             'patrimonial',
             'documentos',
         ],
-        link: './artigos/artigo-003/',
+        link: '/portal/artigos/artigo-003/',
         imagem:
-            'portal-card-3.webp',
+            '/image-portal/portal-card-3.webp',
     },
     {
         id: 'portal-004',
@@ -83,9 +83,9 @@ export const artigos = [
             'cartório',
             'propriedade',
         ],
-        link: './artigos/artigo-004/',
+        link: '/portal/artigos/artigo-004/',
         imagem:
-            'portal-card-4.webp',
+            '/image-portal/portal-card-4.webp',
     },
     {
         id: 'portal-005',
@@ -104,9 +104,9 @@ export const artigos = [
             'planejamento',
             'documentos',
         ],
-        link: './artigos/artigo-005/',
+        link: '/portal/artigos/artigo-005/',
         imagem:
-            'portal-card-5.webp',
+            '/image-portal/portal-card-5.webp',
     },
     {
         id: 'portal-006',
@@ -125,9 +125,9 @@ export const artigos = [
             'irregular',
             'registro',
         ],
-        link: './artigos/artigo-006/',
+        link: '/portal/artigos/artigo-006/',
         imagem:
-            'portal-card-6.webp',
+            '/image-portal/portal-card-6.webp',
     },
     {
         id: 'portal-007',
@@ -146,9 +146,9 @@ export const artigos = [
             'família',
             'diálogo',
         ],
-        link: './artigos/artigo-007/',
+        link: '/portal/artigos/artigo-007/',
         imagem:
-            'portal-card-7.webp',
+            '/image-portal/portal-card-7.webp',
     },
     {
         id: 'portal-008',
@@ -167,9 +167,9 @@ export const artigos = [
             'titularidade',
             'segurança',
         ],
-        link: './artigos/artigo-008/',
+        link: '/portal/artigos/artigo-008/',
         imagem:
-            'portal-card-8.webp',
+            '/image-portal/portal-card-8.webp',
     },
     {
         id: 'portal-009',
@@ -188,9 +188,9 @@ export const artigos = [
             'estratégia',
             'orientação',
         ],
-        link: './artigos/artigo-009/',
+        link: '/portal/artigos/artigo-009/',
         imagem:
-            'portal-card-9.webp',
+            '/image-portal/portal-card-9.webp',
     },
     {
         id: 'portal-010',
@@ -209,9 +209,9 @@ export const artigos = [
             'assinatura',
             'revisão',
         ],
-        link: './artigos/artigo-010/',
+        link: '/portal/artigos/artigo-010/',
         imagem:
-            'portal-card-10.webp',
+            '/image-portal/portal-card-10.webp',
     },
     {
         id: 'portal-011',
@@ -230,9 +230,9 @@ export const artigos = [
             'estratégia',
             'família',
         ],
-        link: './artigos/artigo-011/',
+        link: '/portal/artigos/artigo-011/',
         imagem:
-            './portal-card-11.webp',
+            './/image-portal/portal-card-11.webp',
     },
     {
         id: 'portal-012',
@@ -251,9 +251,9 @@ export const artigos = [
             'histórico',
             'análise',
         ],
-        link: './artigos/artigo-012/',
+        link: '/portal/artigos/artigo-012/',
         imagem:
-            './portal-card-12.webp',
+            './/image-portal/portal-card-12.webp',
     },
     {
         id: 'portal-013',
@@ -272,9 +272,9 @@ export const artigos = [
             'sobrevivente',
             'sucessão',
         ],
-        link: './artigos/artigo-013/',
+        link: '/portal/artigos/artigo-013/',
         imagem:
-            './portal-card-13.webp',
+            './/image-portal/portal-card-13.webp',
     },
     {
         id: 'portal-014',
@@ -293,9 +293,9 @@ export const artigos = [
             'financiamento',
             'matrícula',
         ],
-        link: './artigos/artigo-014/',
+        link: '/portal/artigos/artigo-014/',
         imagem:
-            './portal-card-14.webp',
+            './/image-portal/portal-card-14.webp',
     },
     {
         id: 'portal-015',
@@ -314,9 +314,9 @@ export const artigos = [
             'ordinária',
             'extraordinária',
         ],
-        link: './artigos/artigo-015/',
+        link: '/portal/artigos/artigo-015/',
         imagem:
-            './portal-card-15.webp',
+            './/image-portal/portal-card-15.webp',
     },
     {
         id: 'portal-016',
@@ -335,9 +335,9 @@ export const artigos = [
             'regras',
             'comum',
         ],
-        link: './artigos/artigo-016/',
+        link: '/portal/artigos/artigo-016/',
         imagem:
-            './portal-card-16.webp',
+            '/image-portal//image-portal/portal-card-16.webp',
     },
 ];
 

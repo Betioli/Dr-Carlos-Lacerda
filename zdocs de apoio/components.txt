@@ -63,14 +63,14 @@
 
 .navbar-brand-text h2 {
     margin: 0;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.92);
+    color: var(--cor-dourado);
     line-height: 1;
 }
 
 .navbar-brand-text span {
-    font-size: 12px;
+    font-size: 8px;
     color: rgba(255, 255, 255, 0.72);
     font-weight: 400;
 }
