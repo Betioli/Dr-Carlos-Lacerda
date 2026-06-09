@@ -79,3 +79,5 @@ Preferível:
 
 image-portal/
 portal-images/
+
+eu notei que o artigo 01 fica fixo ao buscar palavras chaves.

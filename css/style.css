@@ -776,7 +776,7 @@ body {
         =================================== */
 .secao-portal {
     padding: var(--espacamento-secao) 0;
-    background: var(--cor-cinza-escuro);
+    background: var(--cor-secundaria-branco);
 }
 
 .portal-grid {
