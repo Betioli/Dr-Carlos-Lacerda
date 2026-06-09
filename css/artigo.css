@@ -69,6 +69,7 @@
     padding: 0;
     color: var(--cor-secundaria-branco);
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.24);
+
 }
 
 .artigo-tag {
@@ -78,12 +79,15 @@
     margin-bottom: 18px;
     padding: 7px 14px;
     border: 1px solid rgba(212, 175, 55, 0.45);
-    border-radius: 999px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 30px;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(8px);
     color: var(--cor-dourado);
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
 }
@@ -91,7 +95,7 @@
 .artigo-titulo {
     margin: 0;
     color: var(--cor-secundaria-branco);
-    font-size: clamp(26px, 4vw, 42px);
+    font-size: clamp(26px, 4vw, 32px);
     line-height: 1.15;
     letter-spacing: -0.04em;
     font-weight: 700;
@@ -114,6 +118,7 @@
 .artigo-leitura {
     display: inline;
     font-weight: 600;
+    margin-top: 30px;
 }
 
 .artigo-divisor {
@@ -131,7 +136,7 @@
     position: relative;
     z-index: 1;
     margin-top: 60vh;
-    margin-left: 30vh;
+    margin-left: 2rem;
     /* Remove padding-top; agora começa naturalmente após hero */
 }
 
@@ -142,6 +147,7 @@
     line-height: 1.8;
     letter-spacing: 0.5px;
     color: var(--cor-cinza-escuro);
+    margin: 0 2rem 0 7rem;
 }
 
 .artigo-corpo p {
@@ -154,11 +160,11 @@
 
 /* ----- CITAÇÃO DESTACADA ----- */
 .pull-quote {
-    margin: 48px 0;
-    padding: 22px 32px 22px 28px;
+    margin: 28px 0;
+    padding: 2px 32px 2px 28px;
     background: var(--cor-cinza);
-    border-left: 5px solid var(--cor-dourado);
-    border-radius: 8px;
+    border-left: 3px solid var(--cor-dourado);
+    border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
@@ -190,28 +196,38 @@
 /* ----- FIGURA COM IMAGEM ----- */
 .artigo-figura {
     margin: 48px 0;
-    text-align: center;
+    max-width: 860px;
+    position: relative;
 }
 
 .artigo-figura img {
     display: block;
     width: 100%;
-    max-width: 1200px;
     height: 20vh;
-    margin: 0 auto 16px;
     border-radius: 12px;
     object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    filter: brightness(0.35);
 }
 
 .artigo-figura figcaption {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 0 20px;
-    color: var(--cor-cinza-escuro);
-    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: var(--cor-dourado);
+    font-size: 16px;
     line-height: 1.6;
     font-style: italic;
+    border-radius: 0 0 12px 12px;
+    margin: 30px 0;
+    text-align: left;
+    align-items: center;
+    font-weight: 600;
+}
+
+.artigo-fonte {
+    margin: 0 0 0 6rem;
 }
 
 .artigo-fonte h3 {
@@ -224,14 +240,15 @@
 .artigo-fonte p {
     font-size: 14px;
     color: rgb(75, 74, 74);
+    line-height: 1.8;
 }
 
 /* ----- ARTIGOS RELACIONADOS ----- */
 .artigos-relacionados-interno {
-    margin-top: 120px;
+    margin-top: 50px;
     margin-bottom: 40px;
     padding-top: 80px;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: 2px solid rgba(0, 0, 0, 0.18);
 }
 
 .relacionados-wrapper {
@@ -258,8 +275,11 @@
     align-items: center;
     width: fit-content;
     padding: 6px 12px;
-    border-radius: 999px;
-    background: rgba(212, 175, 55, 0.12);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 30px;
+    background: rgb(212, 175, 55);
     color: var(--cor-dourado);
     font-size: 12px;
     font-weight: 800;
