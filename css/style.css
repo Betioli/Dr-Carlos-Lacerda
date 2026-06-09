@@ -628,6 +628,10 @@ body {
     transition: opacity 0.5s ease;
 }
 
+/* ===================================
+           SE��O - FAQ
+        =================================== */
+
 .secao-faq {
     padding: var(--espacamento-secao) 0;
     background: url('../image/bg-faq-desktop.webp') center/cover;
@@ -637,8 +641,9 @@ body {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    transition: height 0.45s ease;
+    transition: height 0.15s ease;
     min-height: 200px;
+    height: auto;
 }
 
 .secao-titulo-faq {
@@ -666,7 +671,7 @@ body {
     border-radius: 999px;
     background: linear-gradient(135deg, var(--cor-dourado), #f3dc8f);
     box-shadow: 0 10px 24px rgba(212, 175, 55, 0.24);
-    transition: transform 0.45s ease, width 0.45s ease;
+    transition: transform 0.15s ease, width 0.15s ease;
     z-index: 0;
 }
 
@@ -704,8 +709,8 @@ body {
     transform: translateY(28px);
     pointer-events: none;
     transition:
-        opacity 0.45s ease,
-        transform 1.95s ease;
+        opacity 0.15s ease,
+        transform 0.15s ease;
 }
 
 .faq-panel.is-active {
@@ -756,7 +761,7 @@ body {
 .faq-resposta {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.15s ease;
 }
 
 .faq-resposta-inner {
@@ -768,7 +773,7 @@ body {
 }
 
 .faq-item.active .faq-resposta {
-    max-height: 500px;
+    max-height: 1500px;
 }
 
 /* ===================================

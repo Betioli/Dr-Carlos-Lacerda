@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
         faqItems.forEach((item) => item.classList.remove('active'));
     };
 
-    const getActiveFaqPanel = () =>
-        faqPanels.find((faqPanel) => faqPanel.classList.contains('is-active')) ??
-        faqPanels[0] ??
-        null;
+    const getActiveFaqPanel = () => {
+        const ativo = faqPanels.find((faqPanel) => faqPanel.classList.contains('is-active'));
+        return ativo || null;  // Retorna o ativo OU null (nunca força o primeiro)
+    };
 
     const syncFaqContainerHeight = () => {
         if (!faqContainer) {
@@ -56,16 +56,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const activePanel = getActiveFaqPanel();
 
         if (!activePanel) {
-            faqContainer.style.height = '';
+            faqContainer.style.height = 'auto';  /* ← MUDE DE '' PARA 'auto' */
             return;
         }
 
         faqContainer.style.height = `${activePanel.scrollHeight}px`;
     };
-
     const requestFaqHeightSync = () => {
         window.cancelAnimationFrame(faqHeightFrame);
+
+        // Sincronizar imediatamente
         faqHeightFrame = window.requestAnimationFrame(syncFaqContainerHeight);
+
+        // Sincronizar NOVAMENTE após a transição CSS (0.45s + margem)
+        window.setTimeout(syncFaqContainerHeight, 160);
     };
 
     const setActiveFaqTab = (tabKey) => {
