@@ -49,27 +49,30 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const syncFaqContainerHeight = () => {
-        if (!faqContainer) {
-            return;
-        }
-
+        if (!faqContainer) return;
         const activePanel = getActiveFaqPanel();
-
         if (!activePanel) {
-            faqContainer.style.height = 'auto';  /* ← MUDE DE '' PARA 'auto' */
+            faqContainer.style.height = 'auto';
             return;
         }
-
-        faqContainer.style.height = `${activePanel.scrollHeight}px`;
+        // Pequeno delay para garantir que o layout tenha sido recalculado
+        requestAnimationFrame(() => {
+            faqContainer.style.height = `${activePanel.scrollHeight}px`;
+        });
     };
+
     const requestFaqHeightSync = () => {
         window.cancelAnimationFrame(faqHeightFrame);
 
-        // Sincronizar imediatamente
-        faqHeightFrame = window.requestAnimationFrame(syncFaqContainerHeight);
-
-        // Sincronizar NOVAMENTE após a transição CSS (0.45s + margem)
-        window.setTimeout(syncFaqContainerHeight, 160);
+        // Aguarda a transição do max-height (0.3s) + folga de segurança
+        setTimeout(() => {
+            const activePanel = getActiveFaqPanel();
+            if (!activePanel) {
+                faqContainer.style.height = 'auto';
+                return;
+            }
+            faqContainer.style.height = `${activePanel.scrollHeight}px`;
+        }, 350); // 350 ms > 300 ms da transição
     };
 
     const setActiveFaqTab = (tabKey) => {
