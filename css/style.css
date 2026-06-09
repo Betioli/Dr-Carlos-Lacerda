@@ -346,9 +346,8 @@ body {
 }
 
 /* ===================================
-           SE��O - COMO RESOLVE (COM BANNER)
-           T�TULOS MENORES PARA MOBILE
-        =================================== */
+   SEÇÃO - COMO FUNCIONA (COM BANNER)
+=================================== */
 .secao-resolve {
     padding: var(--espacamento-secao) 0;
     position: relative;
@@ -389,22 +388,56 @@ body {
 
 .resolve-item {
     background: rgba(255, 255, 255, 0.95);
-    padding: 15px 40px;
+    padding: 15px 40px 15px 80px;
+    /* espaço à esquerda mantido */
     margin-bottom: 10px;
     border-radius: 10px;
     font-size: 15px;
     font-weight: 400;
     color: var(--cor-primaria-preto);
     position: relative;
-    padding-left: 80px;
     transition: all 0.3s ease;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* alinhamento no topo para textos longos */
+}
+
+.resolve-item-icon {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-dourado);
+    /* fallback, mas SVG usa stroke próprio */
+}
+
+/* Ajuste para telas menores: ícone pode ficar no fluxo */
+@media (max-width: 576px) {
+    .resolve-item {
+        padding-left: 20px;
+    }
+
+    .resolve-item-icon {
+        position: static;
+        transform: none;
+        margin-right: 12px;
+        margin-bottom: 8px;
+    }
 }
 
 .resolve-item h3 {
     font-size: 20px;
     font-weight: 700;
     color: var(--cor-primaria-preto);
-    margin-bottom: px;
+    margin-bottom: 5px;
+    width: 100%;
+    /* ocupa a linha, caso use flex */
 }
 
 .resolve-item p {
@@ -412,6 +445,7 @@ body {
     color: var(--cor-cinza-escuro);
     line-height: 1.6;
     margin: 0;
+    width: 100%;
 }
 
 .resolve-item:hover {
@@ -419,14 +453,9 @@ body {
     transform: translateX(10px);
 }
 
+/* Remove o pseudo-elemento antigo */
 .resolve-item::before {
-    content: '?';
-    position: absolute;
-    left: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 32px;
-    color: var(--cor-dourado);
+    content: none;
 }
 
 /* ===================================
@@ -747,7 +776,7 @@ body {
         =================================== */
 .secao-portal {
     padding: var(--espacamento-secao) 0;
-    background: var(--cor-cinza);
+    background: var(--cor-cinza-escuro);
 }
 
 .portal-grid {
