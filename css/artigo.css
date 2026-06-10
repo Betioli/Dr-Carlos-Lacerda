@@ -121,9 +121,16 @@
     margin-top: 30px;
 }
 
-.artigo-divisor {
+.artigo-autor {
     display: inline;
-    color: rgba(255, 255, 255, 0.55);
+    font-weight: 600;
+    margin-top: 30px;
+    color: var(--cor-dourado);
+}
+
+.artigo-meta a {
+    margin-top: 30px;
+    color: var(--cor-secundaria-branco);
 }
 
 .artigo-leitura {
@@ -282,7 +289,7 @@
     background: rgb(212, 175, 55);
     color: var(--cor-dourado);
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin: 0;

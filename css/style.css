@@ -1001,7 +1001,7 @@ body {
 
 .secao-cta p {
     color: rgba(255, 255, 255, 0.85);
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 40px;
 }
 
@@ -1013,8 +1013,8 @@ body {
     bottom: 30px;
     right: 30px;
     background: #25D366;
-    width: 65px;
-    height: 65px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1031,8 +1031,8 @@ body {
 }
 
 .whatsapp-float svg {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     fill: white;
 }
 
@@ -1084,7 +1084,7 @@ footer {
 .footer-section p {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.8);
-    line-height: 1.8;
+    line-height: 2.5;
 }
 
 .footer-bottom {
