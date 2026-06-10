@@ -103,6 +103,7 @@
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.9);
     margin: 0;
+    letter-spacing: 1px;
 }
 
 /* ----- CONTEÚDO NORMAL (Serviços em novo .container) ----- */
@@ -231,6 +232,7 @@
     font-size: 15px;
     line-height: 1.8;
     margin: 0 0 24px 0;
+    letter-spacing: 1px;
 }
 
 .btn-ver-todos {

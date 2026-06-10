@@ -102,6 +102,7 @@
 .busca-topo p {
     color: var(--cor-cinza-escuro);
     font-size: 15px;
+    letter-spacing: 1px;
 }
 
 .busca-form {

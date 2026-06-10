@@ -814,6 +814,7 @@ body {
     color: var(--cor-cinza-escuro);
     line-height: 1.8;
     font-weight: 400;
+    letter-spacing: 1px;
 }
 
 .portal-carrossel-wrapper {
