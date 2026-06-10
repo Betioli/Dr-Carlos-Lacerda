@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectArea = document.getElementById('busca-area');
     const inputPalavra = document.getElementById('busca-palavra');
 
+    // =================================================================
+    // ADIÇÃO 1: Encontra o seu <h2> do título pelo ID
+    // =================================================================
+    const tituloContador = document.getElementById('portal-artigos-titulo');
+
     if (!grid || !resultado || !btnBuscar || !btnLimpar || !selectArea || !inputPalavra) {
         return;
     }
@@ -170,6 +175,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const itensDaPagina = resultados.slice(inicio, inicio + ARTIGOS_POR_PAGINA);
 
         btnLimpar.hidden = !temFiltro;
+
+        // =================================================================
+        // ADIÇÃO 2: Atualiza o texto do h2 automaticamente com o total encontrado
+        // =================================================================
+        if (tituloContador) {
+            tituloContador.textContent = `${artigos.length} artigos disponíveis`;
+        }
+
         resultado.innerHTML = temFiltro
             ? `<strong>${resultados.length}</strong> artigo(s) encontrado(s) - página <strong>${paginaAtual}</strong> de <strong>${totalPaginas}</strong>`
             : `<strong>${artigos.length}</strong> artigos disponíveis - página <strong>${paginaAtual}</strong> de <strong>${totalPaginas}</strong>`;
@@ -241,6 +254,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         paginaAtual = pagina;
         renderizar();
+
+        // Rola suavemente até o título/resultado dos artigos
+        const topoArtigos = document.getElementById('portal-resultado');
+        if (topoArtigos) {
+            topoArtigos.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     });
 
     inputPalavra.addEventListener('keydown', (event) => {

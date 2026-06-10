@@ -339,6 +339,7 @@ export const artigos = [
         imagem:
             '/image-portal/portal-card-16.webp',
     },
+
 ];
 
 export const obterArtigosHome = () => artigos.slice(-8);

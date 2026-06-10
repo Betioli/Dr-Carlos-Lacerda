@@ -359,6 +359,11 @@
     flex-wrap: wrap;
 }
 
+#portal-resultado {
+    /* Ajuste os 100px para o tamanho aproximado da altura da sua navbar */
+    scroll-margin-top: 300px;
+}
+
 .paginacao-prev,
 .paginacao-next,
 .paginacao-numero {

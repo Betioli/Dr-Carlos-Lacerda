@@ -1,5 +1,6 @@
 Problemas que já saltam aos olhos ⚠️
-1. SEO do portal parece incompleto
+1. 
+SEO do portal parece incompleto
 
 Vi:
 
@@ -19,25 +20,8 @@ author schema
 
 Para advogado, isso pesa.
 
-2. Categoria inconsistente
-
-Você usa:
-
-data-area="familia"
-data-area="imobiliario"
-data-area="consultoria"
-
-Mas no select vi:
-
-<option value="familia">
-<option value="imobiliario">
-
-Consultoria aparentemente não existe no filtro.
-
-Resultado:
-
-artigos 009–012 podem nunca aparecer corretamente.
-3. URLs numéricas são ruins para SEO
+3. 
+URLs numéricas são ruins para SEO
 
 Hoje:
 
@@ -52,32 +36,6 @@ Melhor:
 
 Porque URL semântica ajuda indexação e CTR.
 
-4. Mistura de assets locais e externos
-
-Vi:
-
-src="../image portal/portal-card-1.webp"
-
-e depois:
-
-images.unsplash.com
-
-Isso cria:
-
-inconsistência visual
-dependência externa
-risco de CLS / performance
-5. Espaço no nome da pasta
-
-Vi:
-
-image portal/
-
-Espaço em pasta geralmente vira dor de cabeça.
-
-Preferível:
-
-image-portal/
-portal-images/
-
+4.
 eu notei que o artigo 01 fica fixo ao buscar palavras chaves.
+Padronizar footer com icones em contato e redes sociais
