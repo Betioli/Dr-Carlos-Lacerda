@@ -218,8 +218,16 @@ body {
 
 .secao-cta p {
     color: rgba(255, 255, 255, 0.85);
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 40px;
+    max-width: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.secao-cta p span {
+    font-weight: 500;
 }
 
 /* ----- BOTÃO WHATSAPP FLUTUANTE ----- */

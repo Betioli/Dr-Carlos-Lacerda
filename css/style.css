@@ -433,7 +433,7 @@ body {
 
 .resolve-item h3 {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--cor-primaria-preto);
     margin-bottom: 5px;
     width: 100%;
@@ -441,7 +441,7 @@ body {
 }
 
 .resolve-item p {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--cor-cinza-escuro);
     line-height: 1.6;
     margin: 0;
@@ -508,14 +508,14 @@ body {
 }
 
 .sobre-text .oab {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--cor-cinza-escuro);
     margin-bottom: 30px;
     font-weight: 600;
 }
 
 .sobre-text p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.8;
     color: var(--cor-cinza-escuro);
 }
@@ -731,7 +731,7 @@ body {
 
 .faq-pergunta {
     padding: 15px 20px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     color: var(--cor-secundaria-branco);
     cursor: pointer;
@@ -772,6 +772,7 @@ body {
     line-height: 1.7;
     color: var(--cor-secundaria-branco);
     font-weight: 400;
+    letter-spacing: 1px;
 }
 
 .faq-item.active .faq-resposta {
@@ -809,7 +810,7 @@ body {
 }
 
 .portal-subtitulo {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--cor-cinza-escuro);
     line-height: 1.8;
     font-weight: 400;
