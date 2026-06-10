@@ -1,10 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
     const updateNavbarState = () => {
-        if (!navbar) {
-            return;
-        }
-
+        if (!navbar) return;
         navbar.classList.toggle('scrolled', window.scrollY > 20);
     };
 
@@ -21,22 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const faqContainer = document.querySelector('.faq-container');
     const faqPanels = Array.from(document.querySelectorAll('[data-faq-panel]'));
     const faqItems = Array.from(document.querySelectorAll('.faq-item'));
-    let faqHeightFrame = 0;
 
     const positionIndicator = () => {
-        if (!faqTabsContainer || !faqIndicator || !faqTabs.length) {
-            return;
-        }
+        if (!faqTabsContainer || !faqIndicator || !faqTabs.length) return;
 
         const activeTab =
-            faqTabs.find((tab) => tab.classList.contains('is-active')) ??
-            faqTabs[0];
+            faqTabs.find((tab) => tab.classList.contains('is-active')) ?? faqTabs[0];
         const containerRect = faqTabsContainer.getBoundingClientRect();
         const tabRect = activeTab.getBoundingClientRect();
-        const offsetLeft = tabRect.left - containerRect.left;
 
         faqIndicator.style.width = `${tabRect.width}px`;
-        faqIndicator.style.transform = `translateX(${offsetLeft}px)`;
+        faqIndicator.style.transform = `translateX(${tabRect.left - containerRect.left}px)`;
     };
 
     const closeAllFaqItems = () => {
@@ -44,8 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const getActiveFaqPanel = () => {
-        const ativo = faqPanels.find((faqPanel) => faqPanel.classList.contains('is-active'));
-        return ativo || null;  // Retorna o ativo OU null (nunca força o primeiro)
+        return faqPanels.find((p) => p.classList.contains('is-active')) || null;
     };
 
     const syncFaqContainerHeight = () => {
@@ -55,24 +46,28 @@ document.addEventListener('DOMContentLoaded', () => {
             faqContainer.style.height = 'auto';
             return;
         }
-        // Pequeno delay para garantir que o layout tenha sido recalculado
         requestAnimationFrame(() => {
             faqContainer.style.height = `${activePanel.scrollHeight}px`;
         });
     };
 
     const requestFaqHeightSync = () => {
-        window.cancelAnimationFrame(faqHeightFrame);
-
-        // Aguarda a transição do max-height (0.3s) + folga de segurança
-        setTimeout(() => {
-            const activePanel = getActiveFaqPanel();
-            if (!activePanel) {
-                faqContainer.style.height = 'auto';
-                return;
-            }
+        const activePanel = getActiveFaqPanel();
+        if (!activePanel) {
+            faqContainer.style.height = 'auto';
+            return;
+        }
+        if ('ResizeObserver' in window) {
+            const observer = new ResizeObserver(() => {
+                if (faqContainer && getActiveFaqPanel() === activePanel) {
+                    faqContainer.style.height = `${activePanel.scrollHeight}px`;
+                }
+            });
+            observer.observe(activePanel);
+            setTimeout(() => observer.disconnect(), 300);
+        } else {
             faqContainer.style.height = `${activePanel.scrollHeight}px`;
-        }, 350); // 350 ms > 300 ms da transição
+        }
     };
 
     const setActiveFaqTab = (tabKey) => {
@@ -99,20 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     faqItems.forEach((item) => {
         const pergunta = item.querySelector('.faq-pergunta');
-
-        if (!pergunta) {
-            return;
-        }
+        if (!pergunta) return;
 
         pergunta.addEventListener('click', () => {
             const panel = item.closest('.faq-panel');
-            const activePanel = faqPanels.find((faqPanel) =>
-                faqPanel.classList.contains('is-active')
-            );
+            const activePanel = faqPanels.find((p) => p.classList.contains('is-active'));
 
-            if (panel && activePanel && panel !== activePanel) {
-                return;
-            }
+            if (panel && activePanel && panel !== activePanel) return;
 
             const isActive = item.classList.contains('active');
 
@@ -127,9 +115,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             requestFaqHeightSync();
-        });
-    });
 
+            const resposta = item.querySelector('.faq-resposta');
+            if (resposta) {
+                resposta.addEventListener('transitionend', syncFaqContainerHeight, { once: true });
+            }
+        });
+    }); // ← forEach fecha AQUI
+
+    // ✅ FORA do forEach — roda só uma vez
     const initialTab = faqTabs.find((tab) => tab.classList.contains('is-active'));
     if (initialTab?.dataset.faqTab) {
         setActiveFaqTab(initialTab.dataset.faqTab);
@@ -140,29 +134,19 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', positionIndicator, { passive: true });
 
     if ('ResizeObserver' in window && faqTabsContainer) {
-        const observer = new ResizeObserver(positionIndicator);
-        observer.observe(faqTabsContainer);
+        const resizeObserver = new ResizeObserver(positionIndicator);
+        resizeObserver.observe(faqTabsContainer);
     }
 
     window.addEventListener('resize', requestFaqHeightSync, { passive: true });
-    requestFaqHeightSync();
 
-    if (!('IntersectionObserver' in window)) {
-        return;
-    }
+    if (!('IntersectionObserver' in window)) return;
 
     const elementosAnimados = document.querySelectorAll(
         '.consequencia-card, .diferencial-card, .problema-card, .resolve-item, .onde-react-card, .onde-react-copy, .onde-react-globe, .portal-texto, .card-artigo, .card-artigo-portal, .faq-item'
     );
 
-    if (!elementosAnimados.length) {
-        return;
-    }
-
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px',
-    };
+    if (!elementosAnimados.length) return;
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -171,9 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    elementosAnimados.forEach((elemento) => {
-        observer.observe(elemento);
-    });
-});
+    elementosAnimados.forEach((elemento) => observer.observe(elemento));
+}); // ← DOMContentLoaded fecha AQUI
