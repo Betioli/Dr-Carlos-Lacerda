@@ -897,7 +897,7 @@ body {
 }
 
 .portal-carrossel-wrapper .card-artigo-link::after {
-    content: '?';
+    content: '→';
 }
 
 .portal-carrossel-wrapper .seta-carrossel {
