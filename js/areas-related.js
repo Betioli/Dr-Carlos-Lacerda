@@ -20,17 +20,16 @@ const criarCard = (artigo) => `
     </article>
 `;
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-carrossel-area]').forEach((carrossel) => {
-        const area = carrossel.dataset.carrosselArea;
-        const wrapper = carrossel.querySelector('.carrossel-wrapper');
+// O código abaixo agora roda direto, sem o wrapper do DOMContentLoaded
+document.querySelectorAll('[data-carrossel-area]').forEach((carrossel) => {
+    const area = carrossel.dataset.carrosselArea;
+    const wrapper = carrossel.querySelector('.carrossel-wrapper');
 
-        if (!area || !wrapper) {
-            return;
-        }
+    if (!area || !wrapper) {
+        return;
+    }
 
-        const artigos = obterArtigosPorArea(area).slice(0, 8);
+    const artigos = obterArtigosPorArea(area).slice(0, 8);
 
-        wrapper.innerHTML = artigos.map(criarCard).join('');
-    });
+    wrapper.innerHTML = artigos.map(criarCard).join('');
 });
