@@ -4,8 +4,7 @@ const montarImagem = (imagem) => {
     if (/^https?:\/\//.test(imagem) || imagem.startsWith('/')) {
         return imagem;
     }
-
-    return `/image-portal/${imagem}`;
+    return `../image-portal/${imagem}`;  // ← 1 nível acima de portal/
 };
 
 document.addEventListener('DOMContentLoaded', () => {

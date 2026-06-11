@@ -6,19 +6,21 @@ const montarImagem = (imagem) => {
     if (/^https?:\/\//.test(imagem) || imagem.startsWith('/')) {
         return imagem;
     }
-    return `/image-portal/${imagem}`;
-};
 
-const criarCard = (artigo) => `
-    <article class="card-artigo" data-id="${artigo.id}">
-        <img class="card-artigo-image" src="${artigo.imagem}" alt="${artigo.titulo}" loading="lazy" />
-        <div class="card-artigo-content">
-            <div class="card-artigo-categoria">${artigo.categoria}</div>
-            <h3 class="card-artigo-titulo">${artigo.titulo}</h3>
-            <a class="card-artigo-link" href="${artigo.link}">Ler mais</a>
-        </div>
-    </article>
-`;
+    // Detecta a profundidade pelo padrão da URL (funciona no Live Server E GitHub Pages)
+    const pathname = window.location.pathname;
+    let depth = 0;
+
+    if (pathname.match(/\/portal\/artigos\//)) {
+        depth = 3;  // portal/artigos/artigo-XXX/
+    } else if (pathname.match(/\/areas\//)) {
+        depth = 2;  // areas/nome-da-area/
+    } else if (pathname.match(/\/portal\//)) {
+        depth = 1;  // portal/
+    }
+
+    return '../'.repeat(depth) + 'image-portal/' + imagem;
+};
 
 // O código abaixo agora roda direto, sem o wrapper do DOMContentLoaded
 document.querySelectorAll('[data-carrossel-area]').forEach((carrossel) => {
