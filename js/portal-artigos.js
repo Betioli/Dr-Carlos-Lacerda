@@ -40,9 +40,9 @@ export const artigos = [
             'quinhão',
             'família',
         ],
-        link: '/portal/artigos/artigo-002/',
+        link: './artigos/artigo-002/',
         imagem:
-            '/image-portal/portal-card-2.webp',
+            '/Dr-Carlos-Lacerda/image-portal/portal-card-2.webp',
     },
     {
         id: 'portal-003',
