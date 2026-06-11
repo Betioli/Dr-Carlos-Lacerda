@@ -20,9 +20,9 @@ export const artigos = [
             'partilha',
             'herdeiros',
         ],
-        link: '/portal/artigos/artigo-001/',
+        link: './artigos/artigo-001/',
         imagem:
-            '/image-portal/portal-card-1.webp',
+            '../../image-portal/portal-card-1.webp',
     },
     {
         id: 'portal-002',
