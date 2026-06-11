@@ -21,7 +21,7 @@ export const artigos = [
             'herdeiros',
         ],
         link: './artigos/artigo-001/',
-        imagem: '../../image-portal/portal-card-1.webp',
+        imagem: '../../../image-portal/portal-card-1.webp',
     },
     {
         id: 'portal-002',
