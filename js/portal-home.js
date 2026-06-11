@@ -4,7 +4,7 @@ const montarImagem = (imagem) => {
     if (/^https?:\/\//.test(imagem) || imagem.startsWith('/')) {
         return imagem;
     }
-    return `image-portal/${imagem}`;
+    return `../image-portal/${imagem}`;
 };
 
 // Função para inicializar o carrossel após os cards serem carregados

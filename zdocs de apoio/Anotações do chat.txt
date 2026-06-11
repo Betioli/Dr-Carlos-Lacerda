@@ -44,3 +44,23 @@ mudar todos os caminhos das imagens
 Páginas de política de privacidade
 Cookies
 
+6.
+Olá, Claude. Estou iniciando um novo projeto web e quero que você atue como um desenvolvedor Front-end sênior especialista em PWA (Progressive Web Apps) e estratégias de cache. 
+
+Para este projeto, adotei uma arquitetura estrita de "Anti-Cache Agressivo" para garantir que, sempre que eu fizer um deploy (como no GitHub Pages), os usuários recebam as atualizações visuais imediatamente, sem que o Service Worker trave a versão antiga.
+
+Sempre que você gerar código HTML, JavaScript principal ou o próprio Service Worker (sw.js) para mim, você DEVE seguir e integrar as seguintes regras:
+
+1. ESTRUTURA DO SW (sw.js):
+- No evento 'install', use obrigatoriamente 'self.skipWaiting()' para ativar o novo SW imediatamente.
+- No evento 'activate', use 'self.clients.claim()' e implemente a limpeza automática limpando qualquer 'CACHE_NAME' antigo que não corresponda à versão atual.
+- No evento 'fetch', use sempre 'caches.match(event.request, { ignoreSearch: true })' para que o SW ignore query strings (como ?v=123) na hora de buscar o arquivo no cache.
+
+2. REGISTRO DO SW (script.js):
+- O registro deve usar obrigatoriamente '{ updateViaCache: "none" }' para forçar o navegador a buscar o sw.js diretamente da rede a cada acesso.
+- Deve conter o listener 'navigator.serviceWorker.addEventListener("controllerchange", ...)' controlado por uma variável booleana de trava (ex: 'isRefreshing'), disparando um 'window.location.reload()' único assim que o novo SW assumir o controle.
+
+3. RECURSOS NO HTML (index.html):
+- Todos os links de CSS e scripts JS devem utilizar versionamento via query string (?v=DATA_OU_VERSAO) para quebrar o cache do navegador.
+
+Entendeu essa estratégia arquitetural? Confirme resumindo como você vai estruturar os códigos a partir de agora com base nessas regras.

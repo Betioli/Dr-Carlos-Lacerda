@@ -21,7 +21,7 @@ export const artigos = [
             'herdeiros',
         ],
         link: './artigos/artigo-001/',
-        imagem: '/Dr-Carlos-Lacerda/image-portal/portal-card-1.webp',
+        imagem: 'portal-card-1.webp',
     },
     {
         id: 'portal-002',
@@ -42,7 +42,7 @@ export const artigos = [
         ],
         link: './artigos/artigo-002/',
         imagem:
-            '/Dr-Carlos-Lacerda/image-portal/portal-card-2.webp',
+            'portal-card-2.webp',
     },
     {
         id: 'portal-003',
@@ -63,7 +63,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-003/',
         imagem:
-            '/image-portal/portal-card-3.webp',
+            'portal-card-3.webp',
     },
     {
         id: 'portal-004',
@@ -84,7 +84,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-004/',
         imagem:
-            '/image-portal/portal-card-4.webp',
+            'portal-card-4.webp',
     },
     {
         id: 'portal-005',
@@ -105,7 +105,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-005/',
         imagem:
-            '/image-portal/portal-card-5.webp',
+            'portal-card-5.webp',
     },
     {
         id: 'portal-006',
@@ -126,7 +126,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-006/',
         imagem:
-            '/image-portal/portal-card-6.webp',
+            'portal-card-6.webp',
     },
     {
         id: 'portal-007',
@@ -147,7 +147,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-007/',
         imagem:
-            '/image-portal/portal-card-7.webp',
+            'portal-card-7.webp',
     },
     {
         id: 'portal-008',
@@ -168,7 +168,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-008/',
         imagem:
-            '/image-portal/portal-card-8.webp',
+            'portal-card-8.webp',
     },
     {
         id: 'portal-009',
@@ -189,7 +189,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-009/',
         imagem:
-            '/image-portal/portal-card-9.webp',
+            'portal-card-9.webp',
     },
     {
         id: 'portal-010',
@@ -210,7 +210,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-010/',
         imagem:
-            '/image-portal/portal-card-10.webp',
+            'portal-card-10.webp',
     },
     {
         id: 'portal-011',
@@ -231,7 +231,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-011/',
         imagem:
-            '/image-portal/portal-card-11.webp',
+            'portal-card-11.webp',
     },
     {
         id: 'portal-012',
@@ -252,7 +252,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-012/',
         imagem:
-            '/image-portal/portal-card-12.webp',
+            'portal-card-12.webp',
     },
     {
         id: 'portal-013',
@@ -273,7 +273,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-013/',
         imagem:
-            '/image-portal/portal-card-13.webp',
+            'portal-card-13.webp',
     },
     {
         id: 'portal-014',
@@ -294,7 +294,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-014/',
         imagem:
-            '/image-portal/portal-card-14.webp',
+            'portal-card-14.webp',
     },
     {
         id: 'portal-015',
@@ -315,7 +315,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-015/',
         imagem:
-            '/image-portal/portal-card-15.webp',
+            'portal-card-15.webp',
     },
     {
         id: 'portal-016',
@@ -336,7 +336,7 @@ export const artigos = [
         ],
         link: '/portal/artigos/artigo-016/',
         imagem:
-            '/image-portal/portal-card-16.webp',
+            'portal-card-16.webp',
     },
 
 ];
