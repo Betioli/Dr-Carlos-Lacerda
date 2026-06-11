@@ -1088,6 +1088,15 @@ footer {
     line-height: 2.5;
 }
 
+.footer-section svg {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    fill: rgba(255, 255, 255, 0.8);
+}
+
 .footer-bottom {
     padding: 30px 0;
     background: rgba(0, 0, 0, 0.5);
@@ -1118,6 +1127,17 @@ footer {
     font-size: 13px;
     color: var(--cor-secundaria-branco);
     margin: 0;
+}
+
+.footer-center a {
+    text-decoration: none;
+    color: var(--cor-secundaria-branco);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.footer-center a:hover {
+    color: var(--cor-dourado);
 }
 
 .footer-right a {
