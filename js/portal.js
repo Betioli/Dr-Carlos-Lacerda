@@ -290,7 +290,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (areaParam || palavraParam || (Number.isInteger(pageParam) && pageParam > 0)) {
         requestAnimationFrame(() => {
-            grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.querySelector('.portal-busca')?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
         });
     }
 });

@@ -22,6 +22,23 @@ const montarImagem = (imagem) => {
     return '../'.repeat(depth) + 'image-portal/' + imagem;
 };
 
+const criarCard = (artigo) => `
+    <article class="card-artigo" data-id="${artigo.id}">
+        <img
+            class="card-artigo-image"
+            src="${montarImagem(artigo.imagem)}"
+            alt="${artigo.titulo}"
+            loading="lazy"
+        />
+        <div class="card-artigo-content">
+            <div class="card-artigo-categoria">${artigo.categoria}</div>
+            <h3 class="card-artigo-titulo">${artigo.titulo}</h3>
+            <a class="card-artigo-link" href="${normalizarCaminhoDoLink(artigo.link)}">
+                Ler mais
+            </a>
+        </div>
+    </article>
+`;
 // O código abaixo agora roda direto, sem o wrapper do DOMContentLoaded
 document.querySelectorAll('[data-carrossel-area]').forEach((carrossel) => {
     const area = carrossel.dataset.carrosselArea;

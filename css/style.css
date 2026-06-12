@@ -784,7 +784,7 @@ body {
         =================================== */
 .secao-portal {
     padding: var(--espacamento-secao) 0;
-    background: var(--cor-secundaria-branco);
+    background: linear-gradient(180deg, var(--cor-secundaria-branco) 0%, #cfcaaf 100%);
 }
 
 .portal-grid {
