@@ -64,3 +64,5 @@ Sempre que você gerar código HTML, JavaScript principal ou o próprio Service 
 - Todos os links de CSS e scripts JS devem utilizar versionamento via query string (?v=DATA_OU_VERSAO) para quebrar o cache do navegador.
 
 Entendeu essa estratégia arquitetural? Confirme resumindo como você vai estruturar os códigos a partir de agora com base nessas regras.
+
+7. Mudar nomes das pastas dos artigos para melhorar SEO
