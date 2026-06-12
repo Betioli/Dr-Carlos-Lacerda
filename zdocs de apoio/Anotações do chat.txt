@@ -65,4 +65,9 @@ Sempre que você gerar código HTML, JavaScript principal ou o próprio Service 
 
 Entendeu essa estratégia arquitetural? Confirme resumindo como você vai estruturar os códigos a partir de agora com base nessas regras.
 
-7. Mudar nomes das pastas dos artigos para melhorar SEO
+7. 
+Mudar nomes das pastas dos artigos para melhorar SEO
+
+8.
+Olá, Dr. Carlos. Acabei de ler um artigo no portal de vocês e gostaria de uma orientação sobre o meu caso." Gostei dessa aqui, vou colocar na CTA dos artigos, boa ideia.
+
